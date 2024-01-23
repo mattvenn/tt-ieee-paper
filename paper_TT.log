@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.9.22)  23 JAN 2024 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.9.22)  23 JAN 2024 19:42
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -587,45 +587,75 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<./Figs/gh action gds layout.png, id=57, 1690.315pt x 1120.185pt>
+<./Figs/gh action cell stats.png, id=57, 1900.09875pt x 1263.72125pt>
+File: ./Figs/gh action cell stats.png Graphic file (type png)
+<use ./Figs/gh action cell stats.png>
+Package pdftex.def Info: ./Figs/gh action cell stats.png  used on input line 86
+.
+(pdftex.def)             Requested size: 252.0pt x 167.58688pt.
+<./Figs/gh action gds layout.png, id=59, 1690.315pt x 1120.185pt>
 File: ./Figs/gh action gds layout.png Graphic file (type png)
 <use ./Figs/gh action gds layout.png>
-Package pdftex.def Info: ./Figs/gh action gds layout.png  used on input line 60
+Package pdftex.def Info: ./Figs/gh action gds layout.png  used on input line 93
 .
 (pdftex.def)             Requested size: 252.0pt x 166.99493pt.
+<./Figs/gh action gds 3d view.png, id=60, 2502.34875pt x 1261.71375pt>
+File: ./Figs/gh action gds 3d view.png Graphic file (type png)
+<use ./Figs/gh action gds 3d view.png>
+Package pdftex.def Info: ./Figs/gh action gds 3d view.png  used on input line 1
+00.
+(pdftex.def)             Requested size: 252.0pt x 127.0451pt.
+<./Figs/gh action d type flop 3d closeup.png, id=61, 1821.80624pt x 925.4575pt>
+
+File: ./Figs/gh action d type flop 3d closeup.png Graphic file (type png)
+<use ./Figs/gh action d type flop 3d closeup.png>
+Package pdftex.def Info: ./Figs/gh action d type flop 3d closeup.png  used on i
+nput line 107.
+(pdftex.def)             Requested size: 252.0pt x 128.00981pt.
+<./Figs/about our community pie chart.png, id=62, 451.6875pt x 279.2031pt>
+File: ./Figs/about our community pie chart.png Graphic file (type png)
+<use ./Figs/about our community pie chart.png>
+Package pdftex.def Info: ./Figs/about our community pie chart.png  used on inpu
+t line 117.
+(pdftex.def)             Requested size: 252.0pt x 155.77325pt.
 )
 (./paper_TT_conclusions.tex) (./paper_TT_acknowledgments.tex)
 (./paper_TT_scanchain_arch.tex [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex
 .map}
 
 
- <./Figs/gh action gds layout.png>]
-<./Figs/tt01_whole_die.png, id=90, 1204.5pt x 1204.5pt>
+ <./Figs/gh action cell stats.png>]
+<./Figs/tt01_whole_die.png, id=95, 1204.5pt x 1204.5pt>
 File: ./Figs/tt01_whole_die.png Graphic file (type png)
 <use ./Figs/tt01_whole_die.png>
 Package pdftex.def Info: ./Figs/tt01_whole_die.png  used on input line 73.
 (pdftex.def)             Requested size: 252.0pt x 251.99675pt.
-<./Figs/scanchain_block_diagram.png, id=91, 1134.2375pt x 929.4725pt>
+<./Figs/scanchain_block_diagram.png, id=96, 1134.2375pt x 929.4725pt>
 File: ./Figs/scanchain_block_diagram.png Graphic file (type png)
 <use ./Figs/scanchain_block_diagram.png>
 Package pdftex.def Info: ./Figs/scanchain_block_diagram.png  used on input line
  80.
 (pdftex.def)             Requested size: 252.0pt x 206.4985pt.
- [2 <./Figs/tt01_whole_die.png (PNG copy)>]
-<./Figs/tt02_gds_zoom.png, id=109, 1784.75478pt x 1613.82053pt>
+ [2 <./Figs/gh action gds layout.png> <./Figs/gh action gds 3d view.png> <./Fig
+s/gh action d type flop 3d closeup.png> <./Figs/about our community pie chart.p
+ng>]
+<./Figs/tt02_gds_zoom.png, id=117, 1784.75478pt x 1613.82053pt>
 File: ./Figs/tt02_gds_zoom.png Graphic file (type png)
 <use ./Figs/tt02_gds_zoom.png>
 Package pdftex.def Info: ./Figs/tt02_gds_zoom.png  used on input line 120.
 (pdftex.def)             Requested size: 252.0pt x 227.85406pt.
-<./Figs/tt02 vs tt03 scanchain clock.png, id=110, 302.0886pt x 282.5757pt>
+<./Figs/tt02 vs tt03 scanchain clock.png, id=118, 302.0886pt x 282.5757pt>
 File: ./Figs/tt02 vs tt03 scanchain clock.png Graphic file (type png)
 <use ./Figs/tt02 vs tt03 scanchain clock.png>
 Package pdftex.def Info: ./Figs/tt02 vs tt03 scanchain clock.png  used on input
  line 127.
 (pdftex.def)             Requested size: 252.0pt x 235.7278pt.
-) (./paper_TT_circuit_boards.tex [3 <./Figs/scanchain_block_diagram.png> <./Fig
-s/tt02_gds_zoom.png> <./Figs/tt02 vs tt03 scanchain clock.png>]
-<./Figs/tt02 board running design.JPG, id=130, 1238.91429pt x 825.94286pt>
+) (./paper_TT_circuit_boards.tex
+Underfull \vbox (badness 1681) has occurred while \output is active []
+
+ [3 <./Figs/tt01_whole_die.png (PNG copy)> <./Figs/scanchain_block_diagram.png>
+ <./Figs/tt02_gds_zoom.png>]
+<./Figs/tt02 board running design.JPG, id=139, 1238.91429pt x 825.94286pt>
 File: ./Figs/tt02 board running design.JPG Graphic file (type jpg)
 <use ./Figs/tt02 board running design.JPG>
 Package pdftex.def Info: ./Figs/tt02 board running design.JPG  used on input li
@@ -637,7 +667,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 29--30
  []
 
 ) (./paper_TT_scanchain_results.tex
-<./Figs/tt02_clock_out.png, id=134, 481.8pt x 234.8775pt>
+<./Figs/tt02_clock_out.png, id=143, 481.8pt x 234.8775pt>
 File: ./Figs/tt02_clock_out.png Graphic file (type png)
 <use ./Figs/tt02_clock_out.png>
 Package pdftex.def Info: ./Figs/tt02_clock_out.png  used on input line 10.
@@ -647,33 +677,35 @@ File: ./Figs/tt02 board running design.JPG Graphic file (type jpg)
 Package pdftex.def Info: ./Figs/tt02 board running design.JPG  used on input li
 ne 19.
 (pdftex.def)             Requested size: 252.0pt x 167.99608pt.
-<./Figs/wokwi mux clock logic.png, id=136, 1381.16pt x 655.44875pt>
+ [4 <./Figs/tt02 vs tt03 scanchain clock.png> <./Figs/tt02 board running design
+.JPG> <./Figs/tt02_clock_out.png (PNG copy)>]
+<./Figs/wokwi mux clock logic.png, id=155, 1381.16pt x 655.44875pt>
 File: ./Figs/wokwi mux clock logic.png Graphic file (type png)
 <use ./Figs/wokwi mux clock logic.png>
 Package pdftex.def Info: ./Figs/wokwi mux clock logic.png  used on input line 3
 6.
 (pdftex.def)             Requested size: 252.0pt x 119.58589pt.
-<./Figs/tt03_clock_out.png, id=137, 481.8pt x 234.8775pt>
+<./Figs/tt03_clock_out.png, id=156, 481.8pt x 234.8775pt>
 File: ./Figs/tt03_clock_out.png Graphic file (type png)
 <use ./Figs/tt03_clock_out.png>
 Package pdftex.def Info: ./Figs/tt03_clock_out.png  used on input line 47.
 (pdftex.def)             Requested size: 252.0pt x 122.8502pt.
-) (./paper_TT_beyond_scanchain.tex [4 <./Figs/tt02 board running design.JPG> <.
-/Figs/tt02_clock_out.png (PNG copy)> <./Figs/wokwi mux clock logic.png> <./Figs
-/tt03_clock_out.png (PNG copy)>]
-<./Figs/tt3p5 vga clock.jpg, id=150, 4641.34pt x 3485.02pt>
+) (./paper_TT_beyond_scanchain.tex
+<./Figs/tt3p5 vga clock.jpg, id=157, 4641.34pt x 3485.02pt>
 File: ./Figs/tt3p5 vga clock.jpg Graphic file (type jpg)
 <use ./Figs/tt3p5 vga clock.jpg>
 Package pdftex.def Info: ./Figs/tt3p5 vga clock.jpg  used on input line 10.
 (pdftex.def)             Requested size: 252.0pt x 189.20396pt.
-<./Figs/tt3p5 layout.png, id=151, 408.8073pt x 384.7173pt>
+<./Figs/tt3p5 layout.png, id=158, 408.8073pt x 384.7173pt>
 File: ./Figs/tt3p5 layout.png Graphic file (type png)
 <use ./Figs/tt3p5 layout.png>
 Package pdftex.def Info: ./Figs/tt3p5 layout.png  used on input line 22.
 (pdftex.def)             Requested size: 252.0pt x 237.15448pt.
 )
-(./paper_TT_multiplexer_silicon_results.tex
-<./Figs/tt3p5 rising latency.PNG, id=153, 481.8pt x 234.8775pt>
+(./paper_TT_multiplexer_silicon_results.tex [5 <./Figs/wokwi mux clock logic.pn
+g> <./Figs/tt03_clock_out.png (PNG copy)> <./Figs/tt3p5 vga clock.jpg> <./Figs/
+tt3p5 layout.png>]
+<./Figs/tt3p5 rising latency.PNG, id=177, 481.8pt x 234.8775pt>
 File: ./Figs/tt3p5 rising latency.PNG Graphic file (type png)
 <use ./Figs/tt3p5 rising latency.PNG>
 Package pdftex.def Info: ./Figs/tt3p5 rising latency.PNG  used on input line 7.
@@ -684,9 +716,7 @@ File: ./Figs/tt3p5 rising latency.PNG Graphic file (type png)
 Package pdftex.def Info: ./Figs/tt3p5 rising latency.PNG  used on input line 14
 .
 (pdftex.def)             Requested size: 252.0pt x 122.8502pt.
- [5 <./Figs/tt3p5 vga clock.jpg> <./Figs/tt3p5 layout.png> <./Figs/tt3p5 rising
- latency.PNG (PNG copy)>]
-<./Figs/tt3p5 enable design.png, id=170, 1498.59875pt x 348.30125pt>
+<./Figs/tt3p5 enable design.png, id=179, 1498.59875pt x 348.30125pt>
 File: ./Figs/tt3p5 enable design.png Graphic file (type png)
 <use ./Figs/tt3p5 enable design.png>
 Package pdftex.def Info: ./Figs/tt3p5 enable design.png  used on input line 29.
@@ -697,7 +727,7 @@ File: ./Figs/tt3p5 enable design.png Graphic file (type png)
 Package pdftex.def Info: ./Figs/tt3p5 enable design.png  used on input line 36.
 
 (pdftex.def)             Requested size: 252.0pt x 58.56735pt.
-<./Figs/tiny_vga_pmod.jpg, id=173, 314.1336pt x 218.0145pt>
+<./Figs/tiny_vga_pmod.jpg, id=182, 314.1336pt x 218.0145pt>
 File: ./Figs/tiny_vga_pmod.jpg Graphic file (type jpg)
 <use ./Figs/tiny_vga_pmod.jpg>
 Package pdftex.def Info: ./Figs/tiny_vga_pmod.jpg  used on input line 46.
@@ -706,24 +736,23 @@ File: ./Figs/tt3p5 vga clock.jpg Graphic file (type jpg)
 <use ./Figs/tt3p5 vga clock.jpg>
 Package pdftex.def Info: ./Figs/tt3p5 vga clock.jpg  used on input line 53.
 (pdftex.def)             Requested size: 252.0pt x 189.20396pt.
-)
-(./paper_TT_improving_multiplexer.tex
-<./Figs/tt05_transmission_gate.png, id=176, 1818.795pt x 1288.815pt>
+) (./paper_TT_improving_multiplexer.tex
+<./Figs/tt05_transmission_gate.png, id=185, 1818.795pt x 1288.815pt>
 File: ./Figs/tt05_transmission_gate.png Graphic file (type png)
 <use ./Figs/tt05_transmission_gate.png>
 Package pdftex.def Info: ./Figs/tt05_transmission_gate.png  used on input line 
 18.
 (pdftex.def)             Requested size: 252.0pt x 178.56462pt.
-) (./paper_TT_silicon_showcase.tex
-<./Figs/synthesized_temperature_sensor.png, id=183, 1154.3125pt x 724.7075pt>
+)
+(./paper_TT_silicon_showcase.tex
+<./Figs/synthesized_temperature_sensor.png, id=192, 1154.3125pt x 724.7075pt>
 File: ./Figs/synthesized_temperature_sensor.png Graphic file (type png)
 <use ./Figs/synthesized_temperature_sensor.png>
 Package pdftex.def Info: ./Figs/synthesized_temperature_sensor.png  used on inp
 ut line 17.
 (pdftex.def)             Requested size: 252.0pt x 158.20868pt.
-)
-(./paper_TT.bbl [6 <./Figs/tt3p5 enable design.png> <./Figs/tiny_vga_pmod.jpg> 
-<./Figs/tt05_transmission_gate.png>]
+) (./paper_TT.bbl [6 <./Figs/tt3p5 rising latency.PNG (PNG copy)> <./Figs/tt3p5
+ enable design.png> <./Figs/tiny_vga_pmod.jpg>]
 Underfull \hbox (badness 8000) in paragraph at lines 32--35
 []\OT1/ptm/m/n/8 ``GDS2 File For-mat - Zero to ASIC Course,'' []$https : / / ww
 w .
@@ -829,15 +858,16 @@ Underfull \hbox (badness 1735) in paragraph at lines 139--141
  / tt05-[]analog-[]test$[], ac-
  []
 
-) [7 <./Figs/synthesized_temperature_sensor.png>] (./paper_TT.aux)
+) [7 <./Figs/tt05_transmission_gate.png> <./Figs/synthesized_temperature_sensor
+.png>] (./paper_TT.aux)
 Package rerunfilecheck Info: File `paper_TT.out' has not changed.
 (rerunfilecheck)             Checksum: FCA0EFA4722173F2D8DD2CB446CA53B1;1512.
  ) 
 Here is how much of TeX's memory you used:
- 11864 strings out of 478287
- 197576 string characters out of 5849289
- 504313 words of memory out of 5000000
- 29745 multiletter control sequences out of 15000+600000
+ 11897 strings out of 478287
+ 198808 string characters out of 5849289
+ 502601 words of memory out of 5000000
+ 29771 multiletter control sequences out of 15000+600000
  514948 words of font info for 122 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  60i,10n,63p,714b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -854,10 +884,10 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/zapfding/uzdr.pfb>
-Output written on paper_TT.pdf (7 pages, 9353538 bytes).
+Output written on paper_TT.pdf (7 pages, 11216721 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
- 262 compressed objects within 3 object streams
- 75 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 337 PDF objects out of 1000 (max. 8388607)
+ 265 compressed objects within 3 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
