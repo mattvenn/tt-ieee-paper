@@ -1,0 +1,24 @@
+\section{Improving the multiplexer and mixed signal support}
+\label{sec:improving}
+
+TT05 splits the mux into two parts to improve performance.
+As each spine segment is now half as long, it will have half the capacitance.
+We expect to reduce the round trip latency to around \(10 ns\).
+
+For TT06, the Caravel harness will be replaced by OpenFrame\cite{openframe}, an alternative harness provided by Efabless that uses the same padring but removes the RISC-V coprocessor.
+This adds an extra \(5 mm^2\) more space for user designs, and an extra \(12\) pins that will be used for analog.
+
+For increased safety, all designs will be power-gated, which will allow designers to take more risks or use custom flows.
+
+Analog and mixed-signal designs will be enabled by adding an analog multiplexer based on transmission gates\cite{transmissiongates}.
+This allows up to \(192\) designs to share the \(8\) analog pins between them.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=\columnwidth]{./Figs/tt05_transmission_gate.png}
+\caption{Transmission gate tested in TT05 that will be used to form the analog multiplexer.}
+\label{fig:transmission_gate_TT05}
+\end{figure}
+
+TT06 is planned to open for digital designs at the end of January 2024, for analog designs at the end of February, and to close on April 19th, 2024.
+

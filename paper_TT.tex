@@ -1,0 +1,66 @@
+%\documentclass[lettersize,journal]{IEEEtran}
+\documentclass[journal]{IEEEtran}
+\usepackage{amsmath,amsfonts}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{array}
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\usepackage{textcomp}
+\usepackage{stfloats}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{hyperref} % for the url and hyperref
+\usepackage{url}
+\usepackage{booktabs} % For better table rules
+\usepackage{tabularx} % For column width specification
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
+% updated with editorial comments 8/9/2021
+
+\begin{document}
+
+\title{TinyTapeout}
+
+\input{paper_TT_authors.tex}
+
+% The paper headers
+\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2021}%
+{Shell \MakeLowercase{\textit{et al.}}: A Sample Article Using IEEEtran.cls for IEEE Journals}
+
+\IEEEpubid{0000--0000/00\$00.00~\copyright~2024 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+\maketitle
+
+\begin{abstract}
+The abstract goes here
+\end{abstract}
+
+\begin{IEEEkeywords}
+Open Source Silicon, TinyTapeout
+\end{IEEEkeywords}
+
+\input{paper_TT_introduction.tex}
+\input{paper_TT_conclusions.tex}
+\input{paper_TT_acknowledgments.tex}
+\input{paper_TT_scanchain_arch.tex}
+\input{paper_TT_circuit_boards.tex}
+\input{paper_TT_scanchain_results.tex}
+\input{paper_TT_beyond_scanchain.tex}
+\input{paper_TT_multiplexer_silicon_results.tex}
+\input{paper_TT_improving_multiplexer.tex}
+\input{paper_TT_silicon_showcase.tex}
+
+
+
+%%%%%%%%% -- BIB STYLE AND FILE -- %%%%%%%%
+\bibliographystyle{IEEEtran}
+\bibliography{references.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
