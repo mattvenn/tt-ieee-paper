@@ -92,7 +92,7 @@ The more designs in the chain, the longer it takes to send and receive data.
 
 Assuming a \(50 MHz\) scan chain clock, \(250\) designs with \(8\) inputs and \(8\) outputs, the maximum refresh rate is \(50M / (8 \times 250) = 25kHz\).
 
-TT01’s scan chain was embedded into each design, which created the risk that a user could unintentionally break it, and break the rest of the chain.
+TT01’s scan chain was embedded into each design, which meant that a user could unintentionally remove it, breaking the chain.
 This risk was mitigated by formally\cite{tinytapeoutscan} proving the chain was present in the submitted design.
 For TT02 and TT03, the scan chain was separated into a separate macro block that the user can’t modify.
 

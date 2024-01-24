@@ -2,7 +2,7 @@
 \label{sec:scan_chain_res}
 
 TT02 chips were received in October 2023, \(11\) months after the chips were submitted for manufacture on Efabless chipIgnite 2211Q.
-The chips were tested for the first time in public on a livestream\cite{wokwi}.
+The chips were tested for the first time in public on a livestream\cite{siliconalive}.
 The chain was validated, and a few of the designs were shown to be working.
 
 \begin{figure}[htp]
@@ -26,7 +26,7 @@ After measuring the clock skew and maximum frequency it was decided to run the p
 Some designs didn’t function as expected, which in most cases was due to faults in the submitted design.
 
 As well as \(82\) Verilog designs, \(64\) used the Wokwi graphical editor, \(5\) used Amaranth, and \(1\) used Chisel.
-Some Wokwi\cite{wokwiagain} designs using combinational logic in flop clocks failed in hardware but worked in simulation.
+Some Wokwi designs using combinational logic in flop clocks failed in hardware but worked in simulation.
 This is due to the lack of timing data in the simulation, and wasn’t detected by STA because the clocks were not known.
 A detailed analysis has yet to be carried out.
 The addition of SR flops to Wokwi will help to alleviate this, as well as the start of an ERC check.

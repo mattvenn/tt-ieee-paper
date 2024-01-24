@@ -69,6 +69,14 @@
 ``{GitHub Actions Documentation},'' \url{https://docs.github.com/en/actions},
   accessed: [Insert access date here].
 
+\bibitem{iverilog}
+``{iVerilog},'' \url{https://github.com/steveicarus/iverilog/}, accessed:
+  [Insert access date here].
+
+\bibitem{cocotb}
+``{cocotb},'' \url{https://www.cocotb.org/}, accessed: [Insert access date
+  here].
+
 \bibitem{automatedtesting}
 ``{Wokwi Automated Testing - TinyTapeout},''
   \url{https://tinytapeout.com/digital_design/wokwi_automated_testing/},
@@ -83,11 +91,6 @@
 ``{Updating Inputs and Outputs of a Design - TinyTapeout Repository},''
   \url{https://github.com/TinyTapeout/tinytapeout-02/blob/tt02/INFO.md#updating-inputs-and-outputs-of-a-specified-design},
   accessed: [Insert access date here].
-
-\bibitem{caravel}
-``{Caravel Harness - Efabless Repository},''
-  \url{https://github.com/efabless/caravel}, accessed: [Insert access date
-  here].
 
 \bibitem{tinytapeoutscan}
 ``{TinyTapeout Scan - GitHub Repository},''
@@ -113,12 +116,29 @@
   \url{https://certification.oshwa.org/es000040.html}, accessed: [Insert access
   date here].
 
-\bibitem{wokwiagain}
-``Wokwi,'' \url{https://wokwi.com/}, accessed: [Insert access date here].
+\bibitem{siliconalive}
+``{TT02 Silicon is Alive! - Zero to ASIC Course Blog},''
+  \url{https://www.zerotoasiccourse.com/post/tt02-silicon-is-alive/}, accessed:
+  [Insert access date here].
+
+\bibitem{tinytapeout03p5}
+``{TinyTapeout 03p5 - GitHub Repository},''
+  \url{https://github.com/TinyTapeout/tinytapeout-03p5}, accessed: [Insert
+  access date here].
 
 \bibitem{micropython}
 ``{MicroPython Official Website},'' \url{https://micropython.org/}, accessed:
   [Insert access date here].
+
+\bibitem{demofirmwaretest}
+``{Demo Firmware Test Script - TinyTapeout Repository},''
+  \url{https://github.com/TinyTapeout/tt3p5-demo-fw/blob/main/tt3p5-test/test.py#L119},
+  accessed: [Insert access date here].
+
+\bibitem{tt04demoboard}
+``{TT04+ Demoboard PCB - TinyTapeout Repository},''
+  \url{https://github.com/TinyTapeout/tt-demo-pcb}, accessed: [Insert access
+  date here].
 
 \bibitem{pinouts}
 ``{Pinouts Specifications - TinyTapeout},''

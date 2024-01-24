@@ -46,7 +46,7 @@ There are 4 main jobs:
 	\item GDS - installs OpenLane and the Sky130 process design kit (PDK), then builds the GDS, and generates a summary of the design that includes utilization, standard cells used, and a 2D and 3D model of the GDS.
 This job can optionally also run a gate-level verification.
 	\item Verification - installs the YosysHQ open source CAD suite which includes many common electronic design automation (EDA) tools.
-Then iVerilog and cocotb are used to run any testbenches included.
+Then iVerilog\cite{iverilog} and cocotb\cite{cocotb} are used to run any testbenches included.
 	\item Documentation - generates a preview of the documentation.
 	\item Precheck - a number of tests are run to make sure that the design doesn’t cause design rule check (DRC) errors after integration into the chip.
 \end{enumerate}
