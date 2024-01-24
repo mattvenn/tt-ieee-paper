@@ -92,25 +92,6 @@ The more designs in the chain, the longer it takes to send and receive data.
 
 Assuming a \(50 MHz\) scan chain clock, \(250\) designs with \(8\) inputs and \(8\) outputs, the maximum refresh rate is \(50M / (8 \times 250) = 25kHz\).
 
-Another concern is hold violations due to the large number of serially connected flops and potentially large clock skews due to long signal wires.
-This was mitigated by:
-\begin{itemize}
-\item Reclocking the output data with a negedge flop, providing more hold margin.
-\item Driving the latch and scan signals separately, and with a configurable delay.
-\item Keeping wires between designs short by snaking them through the grid.
-\end{itemize}
-
-To further reduce the risk of failure, three independent methods of driving the chain are provided:
-\begin{enumerate}
-\item External - all the signals are available as GPIO pins on the chip. This safest option is the default.
-\item Internal - an internal scan chain driver runs the chain and copies the data to and from \(16\) GPIOs.
-\item Logic analyser - The Caravel\cite{caravel} harness provided by Efabless contains a RISC-V co-processor with a firmware driven logic analyser. The logic analyser was connected as a third possible way to drive the chain and hence access all designs from firmware.
-\end{enumerate}
-
-After static timing analysis (STA) it was discovered that the clock duty cycle would increase slightly at each of the \(500\) sequential clock drivers.
-This is because PMOS transistors are weaker than NMOS transistors, so for a balanced drive the PMOS needs to be substantially larger than the NMOS.
-To save space, the PMOS is typically undersized in standard cells, and so the rising clock edge is always slightly slower. This effect limits the maximum clock speed as eventually the clock duty cycle tends to \(100\%\), but faster speeds are possible by starting with a lower duty cycle. With a \(50\%\) duty cycle a \(30 MHz\) maximum clock is expected, limiting the refresh rate to \(7 kHz\).
-
 TT01’s scan chain was embedded into each design, which created the risk that a user could unintentionally break it, and break the rest of the chain.
 This risk was mitigated by formally\cite{tinytapeoutscan} proving the chain was present in the submitted design.
 For TT02 and TT03, the scan chain was separated into a separate macro block that the user can’t modify.
@@ -122,6 +103,14 @@ For TT02 and TT03, the scan chain was separated into a separate macro block that
 \label{fig:TT02_separate_scan_blocks}
 \end{figure}
 
+
+Another concern was hold violations due to the large number of serially connected flops and potentially large clock skews due to long signal wires.  This was mitigated by reclocking the output data with a negedge flop, providing substantially more hold margin.
+
+After static timing analysis (STA) it was discovered that the clock duty cycle could change substantially due to the \(500\) sequential clock drivers. Depending on the clock buffers and capacitance between each design, the clock duty cycle could either increase or decrease, with this effect accumulated over the chain.
+
+For TT01 and TT02 each design used two clock buffers, with the internal flops driven after the first buffer.
+TT03 used inverting clock buffers, with only one between the clock in and out.
+
 \begin{figure}[htp]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt02 vs tt03 scanchain clock.png}
@@ -129,11 +118,6 @@ For TT02 and TT03, the scan chain was separated into a separate macro block that
 \label{fig:TT02_vs_TT03}
 \end{figure}
 
-For TT01 and TT02 each design used two clock buffers, with the internal flops driven after the first buffer.
-
-TT03 used inverting clock buffers, with only one between the clock in and out.
-
-This meant that the clock is inverted between each design, so the delay caused by the PMOS transistors were evenly spread across the negative and positive cycles.
-With this change, the chain should be able to be driven up to around \(60 MHz\), for an update frequency of \(30 kHz\).
+By inverting the clock between each design, any asymmetry in the clock pulse is evenly spread across the negative and positive cycles.
 
 The verification effort\cite{verificationmd} was broad and included a community review, register transfer level (RTL) and gate level (GL) simulation, Formal Verification\cite{sby}, static timing analysis, layout vs schematic (LVS), DRC, and device level static verification\cite{cvc}.

@@ -9,7 +9,7 @@ Each design can be activated and tested in turn.
 Documentation submitted with each project forms a printable datasheet~\cite{datasheet} as well as an online index at TinyTapeout.com/runs/~\cite{tinytapeoutruns}
 
 Design entry is done mostly with Verilog or Wokwi~\cite{wokwi}.
-Wokwi is a schematic based editor that is an easy way to get started for people with no prior hardware description language (HDL) experience.
+Wokwi is a web based schematic based editor that is an easy way to get started for people with no prior hardware description language (HDL) experience.
 The TinyTapeout website includes a basic getting started guide for drawing circuits with Wokwi available in English and Spanish.
 
 The first~\cite{firstshuttle} free and experimental shuttle with 152 designs was submitted to the seventh Google sponsored~\cite{googlesponsored} lottery multi project wafer (MPW) shuttle in September 2022.
@@ -54,31 +54,6 @@ Then iVerilog and cocotb are used to run any testbenches included.
 Successful GDS, Documentation, and Precheck jobs are required to submit to a shuttle.
 Verification is optional but highly encouraged. Wokwi designs can make use of an integrated truth table testing system\cite{automatedtesting}.
 
-%\begin{table*}[htbp]
-%\centering
-%\caption{Summary of the GDS job.}
-%\label{tab:gds_summary}
-%\begin{tabularx}{\textwidth}{@{}lXr@{}}
-%\toprule
-%\textbf{Category} & \textbf{Cells} & \textbf{Count} \\
-%\midrule
-%Fill & decap fill & 1145 \\
-%Combo Logic & o21ai and3b a221o o31a or2b a21o nobr2 o31ai a41o a21o a211o o21ba o21a o21bai a2bb2o or3b o221a a31o a22o o32a o22a a32o a2111o and2b and3b or4b or4bb o211a a2111oi o2bb2a a211oi and4bb o211ai a22oi a31oi o311a & 249 \\
-%Tap & tappwvrgnd & 246 \\
-%Flip Flops & dftxp & 146 \\
-%Buffer & buf clkbui & 127 \\
-%AND & and2 a1boi and3 and4 & 97 \\
-%Misc & dlygate4sd3 dlymetal6s2s comb & 84 \\
-%OR & or3 xor2 or2 or4 & 81 \\
-%NOR & xnor2 nor2 nor3 nor4 & 64 \\
-%NAND & nand2 nand3 nand4 nand2b & 52 \\
-%Inverter & inv & 37 \\
-%Multiplexer & mux2 mux4 & 9 \\
-%Diode & diode & 1 \\
-%\bottomrule
-%\end{tabularx}
-%\end{table*}
-
 While the process can be done entirely in the browser, it’s also possible to install a local copy of the tools, which can help to reduce iteration time, especially for tests and verification.
 
 \begin{figure}[htp]
@@ -115,6 +90,6 @@ The Discord community has 1000 members with 1600 subscribed to the mailing list.
 \begin{figure}[htp]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/about our community pie chart.png}
-\caption{How TT02 submitters identified themselves.}
+\caption{How TT04 submitters identified themselves.}
 \label{fig:TT02_submitters}
 \end{figure}
