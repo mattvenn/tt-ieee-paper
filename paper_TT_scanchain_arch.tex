@@ -1,10 +1,10 @@
 \section{Scanchain architecture}
 \label{sec:scanchain_arch}
 
-TinyTapeout started as an experiment in fitting as many designs as possible into the \(10 mm^2\) available on the Google lottery shuttles (Figure 6).
+TinyTapeout started as an experiment in fitting as many designs as possible into the \(10 mm^2\) available on the Google lottery shuttles (Fig.~\ref{fig:500_designs_chain_TT01}).
 As a fast proof of concept, a scan chain was chosen.
 Each design had 8 inputs and 8 outputs.
-Clock and reset were optional and not treated specially. The chain was formed of scan flops\cite{skywaterpdk}, a type of flip flop with an integrated multiplexer at its input. An example showing a two-design scan chain is shown in Figure 7.
+Clock and reset were optional and not treated specially. The chain was formed of scan flops\cite{skywaterpdk}, a type of flip flop with an integrated multiplexer at its input. An example showing a two-design scan chain is shown in Fig.~\ref{fig:simplified_view_2_designs}.
 
 \begin{figure}[htp]
 \centering
@@ -47,7 +47,7 @@ Another concern was hold violations due to the large number of serially connecte
 After static timing analysis (STA) it was discovered that the clock duty cycle could change substantially due to the \(500\) sequential clock drivers. Depending on the clock buffers and capacitance between each design, the clock duty cycle could either increase or decrease, with this effect accumulated over the chain.
 
 For TT01 and TT02 each design used two clock buffers, with the internal flops driven after the first buffer.
-TT03 used inverting clock buffers, with only one between the clock in and out. Figure 9 shows a comparison between the TT02 and TT03 clock buffer designs.
+TT03 used inverting clock buffers, with only one between the clock in and out. Fig. ~\ref{fig:TT02_vs_TT03} shows a comparison between the TT02 and TT03 clock buffer designs.
 
 \begin{figure}[htp]
 \centering
@@ -58,4 +58,4 @@ TT03 used inverting clock buffers, with only one between the clock in and out. F
 
 By inverting the clock between each design, any asymmetry in the clock pulse is evenly spread across the negative and positive cycles.
 
-The verification effort\cite{verificationmd} was broad and included a community review, register transfer level (RTL) and gate level (GL) simulation, Formal Verification\cite{sby}, static timing analysis, layout vs schematic (LVS), DRC, and device level static verification\cite{cvc}.
+The verification effort\cite{verificationmd} was broad and included a community review, register transfer level (RTL) and gate level (GL) simulation, Formal Verification\cite{sby}, STA, layout vs schematic (LVS), DRC, and device level static verification\cite{cvc}.

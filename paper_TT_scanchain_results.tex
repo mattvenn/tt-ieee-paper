@@ -9,25 +9,18 @@ The chain was validated, and a few of the designs were shown to be working.
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt02_clock_out.png}
 \caption{Measurement from TT02 silicon, with input clock in yellow and the distorted output clock in blue.}
-\label{fig:TT03_clock_out.png}
+\label{fig:TT02_clock_out}
 \end{figure}
 
 In the following days another \(30\) designs were tested and shown to be working.
 
-\begin{figure}[htp]
-\centering
-\includegraphics[width=\columnwidth]{./Figs/tt02 board running design.JPG}
-\caption{The TT02 demo board running a design.}
-\label{fig:TT02_demo_board_design}
-\end{figure}
-
-After measuring the clock skew and maximum frequency it was decided to run the production boards with a \(20MHz\) oscillator, resulting in a \(10MHz\) scan chain.
+After measuring the clock asymmetry (Fig.~\ref{fig:TT02_clock_out}) and maximum frequency it was decided to run the production boards with a \(20MHz\) oscillator, resulting in a \(10MHz\) scan chain.
 
 Some designs didn’t function as expected, which in most cases was due to faults in the submitted design.
 
 As well as \(82\) Verilog designs, \(64\) used the Wokwi graphical editor, \(5\) used Amaranth, and \(1\) used Chisel.
-Some Wokwi designs using combinational logic in flop clocks failed in hardware but worked in simulation.
-This is due to the lack of timing data in the simulation, and wasn’t detected by STA because the clocks were not known.
+Some Wokwi designs using combinational logic in clock paths (Fig.~\ref{fig:failed_design_comb_logic}) worked in simulation but failed in hardware.
+This was due to the lack of timing data in the simulation, and wasn’t detected by STA because the clock paths were not known.
 A detailed analysis has yet to be carried out.
 The addition of SR flops to Wokwi will help to alleviate this, as well as the start of an ERC check.
 
@@ -40,7 +33,7 @@ The addition of SR flops to Wokwi will help to alleviate this, as well as the st
 
 At the time of writing, PCBs are in production and are expected to ship to customers by the end of January 2024.
 
-TinyTapeout 3 silicon was received in January 2024, and the updated scanchain shows a more symmetric output clock at the end of the chain.
+TinyTapeout 3 silicon was received in January 2024, and the updated scanchain shows a more symmetric (Fig.~\ref{fig:TT03_silicon_measurement}) output clock at the end of the chain. This will allow a faster scanchain clock, resulting in a faster update frequency.
 
 \begin{figure}[htp]
 \centering

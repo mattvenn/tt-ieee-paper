@@ -1,6 +1,6 @@
 \section{Multiplexer Silicon Results}
 \label{sec:multiplexer_silicon_res}
-After silicon was received, the worst round trip latency was measured to be \(20 ns\).
+After silicon was received, the worst round trip latency was measured to be \(20 ns\) as shown in Fig~\ref{fig:round_trip_latency_rising_edge} and ~\ref{fig:round_trip_latency_falling_edge}. Some designs have been validated, including a VGA clock project (Fig.~\ref{fig:VGA_clock_design_TT03_5_silicon}) that takes advantage of the new higher speed IO.
 
 \begin{figure}[htp]
 \centering
@@ -16,11 +16,19 @@ After silicon was received, the worst round trip latency was measured to be \(20
 \label{fig:round_trip_latency_falling_edge}
 \end{figure}
 
-The new chip pinout and serial design selection required a new demo board that included an easy way to select the design.
+\begin{figure}[htp]
+\centering
+\includegraphics[width=\columnwidth]{./Figs/tt3p5 vga clock.jpg}
+\caption{VGA clock design running on TT03.5 silicon.}
+\label{fig:VGA_clock_design_TT03_5_silicon}
+\end{figure}
+
+The new chip pinout and serial design selection required a new demo board (Fig.~\ref{fig:TT04plus_demo_board}) that included an easy way to select the design.
 The RP2040 microcontroller was chosen as a co-processor as it allows:
+
 \begin{itemize}
 \item Drag and drop firmware updates on any OS,
-\item Runs MicroPython\cite{micropython}, ideal for beginners to test their designs,
+\item Runs MicroPython\cite{micropython}, ideal for beginners to enable and test their designs (Fig.~\ref{fig:micropython_program}),
 \item External memory emulation via PIO and DMA.
 \end{itemize}
 
@@ -39,19 +47,12 @@ The RP2040 microcontroller was chosen as a co-processor as it allows:
 \end{figure}
 
 An additional PMOD expansion port was added for the bidirectional pins, and the community has started to standardize on pinouts~\cite{pinouts} making it easier to test each other's designs.
-A new repository was created to house user-contributed PMODs~\cite{awesomepmods}.
+A new repository was created to house user-contributed PMODs~\cite{awesomepmods}, for example the VGA PMOD shown in Fig.~\ref{fig:user_contributed_VGA_PMOD}.
 
 \begin{figure}[htp]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tiny_vga_pmod.jpg}
 \caption{A user-contributed VGA output PMOD.}
 \label{fig:user_contributed_VGA_PMOD}
-\end{figure}
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=\columnwidth]{./Figs/tt3p5 vga clock.jpg}
-\caption{VGA clock design running on TT03.5 silicon.}
-\label{fig:VGA_clock_design_TT03_5_silicon}
 \end{figure}
 

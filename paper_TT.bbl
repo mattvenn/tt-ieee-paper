@@ -21,15 +21,8 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{tinytapeout}
-``{TinyTapeout},'' \url{https://tinytapeout.com/}.
-
-\bibitem{github}
-``{GitHub},'' \url{https://github.com/}.
-
-\bibitem{gds}
-``{GDS2 File Format - Zero to ASIC Course},''
-  \url{https://www.zerotoasiccourse.com/terminology/gds2/}.
+\bibitem{pdk}
+``{PDK},'' \url{https://www.zerotoasiccourse.com/terminology/pdk/}.
 
 \bibitem{datasheet}
 ``{Datasheet PDF - TinyTapeout Repository},''
@@ -37,9 +30,6 @@
 
 \bibitem{tinytapeoutruns}
 ``{TinyTapeout Runs},'' \url{https://tinytapeout.com/runs/}.
-
-\bibitem{wokwi}
-``Wokwi,'' \url{https://wokwi.com/}.
 
 \bibitem{firstshuttle}
 ``{First Shuttle - TinyTapeout Runs},''
@@ -53,12 +43,32 @@
 \bibitem{efabless}
 ``{Efabless},'' \url{https://efabless.com/}.
 
+\bibitem{wokwi}
+``Wokwi,'' \url{https://wokwi.com/}.
+
+\bibitem{tinytapeout}
+``{TinyTapeout},'' \url{https://tinytapeout.com/}.
+
+\bibitem{github}
+``{GitHub},'' \url{https://github.com/}.
+
+\bibitem{gds}
+``{GDS2 File Format - Zero to ASIC Course},''
+  \url{https://www.zerotoasiccourse.com/terminology/gds2/}.
+
 \bibitem{verilogtemplate}
 ``{Verilog Template - TinyTapeout Repository},''
   \url{https://github.com/TinyTapeout/tt06-verilog-template}.
 
 \bibitem{githubactions}
 ``{GitHub Actions Documentation},'' \url{https://docs.github.com/en/actions}.
+
+\bibitem{openlane}
+``{OpenLane documentation},'' \url{https://openlane.readthedocs.io/en/latest/}.
+
+\bibitem{skywaterpdk}
+``{Skywater PDK Documentation},''
+  \url{https://skywater-pdk.readthedocs.io/en/main/contents/libraries/sky130_fd_sc_hdll/cells/sdfxtp/README.html}.
 
 \bibitem{iverilog}
 ``{iVerilog},'' \url{https://github.com/steveicarus/iverilog/}.
@@ -69,10 +79,6 @@
 \bibitem{automatedtesting}
 ``{Wokwi Automated Testing - TinyTapeout},''
   \url{https://tinytapeout.com/digital_design/wokwi_automated_testing/}.
-
-\bibitem{skywaterpdk}
-``{Skywater PDK Documentation},''
-  \url{https://skywater-pdk.readthedocs.io/en/main/contents/libraries/sky130_fd_sc_hdll/cells/sdfxtp/README.html}.
 
 \bibitem{updateiodesign}
 ``{Updating Inputs and Outputs of a Design - TinyTapeout Repository},''

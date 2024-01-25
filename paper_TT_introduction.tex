@@ -1,22 +1,23 @@
 \section{Introduction}
 \label{sec:introduction}
 \IEEEPARstart{T}{inyTapeout}
-~\cite{tinytapeout} is multi project chip framework that makes it easier and cheaper than ever to get ASIC designs manufactured.
-The digital design flow consists of templating a GitHub~\cite{github} repository, adding a design, waiting for the tests and binary layout files (GDS~\cite{gds}) generation to complete, then submitting to a quarterly shuttle.
+ is multi project chip platform that makes it easier and cheaper than ever to get ASIC designs manufactured.
 
-Up to 500 designs are multiplexed to 24 general purpose input/output (GPIO) pins, and after manufacture the chips are mounted to a demonstration board for easy testing.
-Each design can be activated and tested in turn.
-Documentation submitted with each project forms a printable datasheet~\cite{datasheet} as well as an online index at TinyTapeout.com/runs/~\cite{tinytapeoutruns}
+Open source tools and process design kit (PDK~\cite{pdk}) are used, so no licenses or NDAs are needed. As the tools are run in the cloud, no software needs to be installed on the user's machine. However, as long as the template structure is followed, proprietry tools can be used.
 
-Design entry is done mostly with Verilog or Wokwi~\cite{wokwi}.
-Wokwi is a web based schematic based editor that is an easy way to get started for people with no prior hardware description language (HDL) experience.
-The TinyTapeout website includes a basic getting started guide for drawing circuits with Wokwi available in English and Spanish.
+Around 400 designs are multiplexed to 24 general purpose input/output (GPIO) pins, and after manufacture the chips are mounted to a demonstration board for easy testing. Each chip contains every design, which can be activated and tested in turn.
+
+Each tile (Fig.~\ref{fig:render_cells_in_use}) is approximately $100\times 160 \mu \text{m}$, enough for around 1000 logic gates. Tiles can be joined to enable larger designs.
+
+By separating the cost of area and the physical chip, a group can share the cost of chip packaging and PCBs, while still getting to test and measure all the designs on the chip. This helps to reduce the overall price for a class, as they can share a smaller number of PCBs while each submitting their own design.
+
+Documentation submitted with each project forms a printable datasheet~\cite{datasheet} as well as an online index at TinyTapeout.com/runs/~\cite{tinytapeoutruns}.
+
+Community engagement has been strong with 756 designs submitted over the first 5 shuttles. Some highlights are listed in section ~\ref{sec:silicon_showcase}.
+The online chat server has 1000 members with 1600 subscribed to the mailing list. Submitters tend to identify as hobbyists, students and teachers as shown in Fig.~\ref{fig:TT04_submitters}.
 
 The first~\cite{firstshuttle} free and experimental shuttle with 152 designs was submitted to the seventh Google sponsored~\cite{googlesponsored} lottery multi project wafer (MPW) shuttle in September 2022.
 The next 4 shuttles combined 582 designs and were sponsored by and manufactured with the Efabless~\cite{efabless} chipIgnite MPW service.
-
-Community engagement has been strong with 756 designs submitted over the 5 shuttles.
-The Discord community has 1000 members with 1600 subscribed to the mailing list. Submitters tend to identify as hobbyists, students and teachers (Figure 5).
 
 \begin{table*}[htbp]
 \centering
@@ -36,60 +37,16 @@ TT06 & 2024-02-01 & 2024-04-19 & 2404  & TBD & TBD        & TBD \\
 \end{tabularx}
 \end{table*}
 
-Each tile is approximately $100\times 160 um$, enough for around 1000 logic gates and is priced at \$50. Figure 2 shows an example design submitted to TT04.
-The physical chip and demo board are optional and cost an additional \$250.
-Individuals pay a reduced \$100 for their first chip and board thanks to sponsorship by Efabless\cite{efabless}.
-
-By separating the cost of area and the cost of the chip, a group of 10 could submit 10 designs and share 1 board for \$600.
-
-The GitHub templates\cite{verilogtemplate} make use of GitHub Actions\cite{githubactions} - an automatic continuous integration system that is triggered every time the repository is updated.
-There are 4 main jobs:
-
-\begin{enumerate}
-	\item GDS - installs OpenLane and the Sky130 process design kit (PDK), then builds the GDS, and generates a summary of the design (Figure 1) that includes utilization, standard cells used, and a 2D (Figure 2) and 3D model (Figure 3) of the GDS.
-This job can optionally also run a gate-level verification.
-	\item Verification - installs the YosysHQ open source CAD suite which includes many common electronic design automation (EDA) tools.
-Then iVerilog\cite{iverilog} and cocotb\cite{cocotb} are used to run any testbenches included.
-	\item Documentation - generates a preview of the documentation.
-	\item Precheck - a number of tests are run to make sure that the design doesn’t cause design rule check (DRC) errors after integration into the chip.
-\end{enumerate}
-
-Successful GDS, Documentation, and Precheck jobs are required to submit to a shuttle.
-Verification is optional but highly encouraged. Wokwi designs can make use of an integrated truth table testing system\cite{automatedtesting}.
-
-While the process can be done entirely in the browser, it’s also possible to install a local copy of the tools, which can help to reduce iteration time, especially for tests and verification.
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=\columnwidth]{./Figs/gh action cell stats.png}
-\caption{The summary table of the GDS job.}
-\label{fig:summary_table_GDS_job}
-\end{figure}
-
 \begin{figure}[htp]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/gh action gds layout.png}
-\caption{The 2D render of the cells in use, with empty areas visible in the lower left corner.}
+\caption{2D render of a single tile}
 \label{fig:render_cells_in_use}
-\end{figure}
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=\columnwidth]{./Figs/gh action gds 3d view.png}
-\caption{The interactive 3D viewer.}
-\label{fig:interactive_3D_viewer}
-\end{figure}
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=\columnwidth]{./Figs/gh action d type flop 3d closeup.png}
-\caption{A deep zoom to a D-type flip-flop, isolated from the rest of the design.}
-\label{fig:zoom_d_flip_flop}
 \end{figure}
 
 \begin{figure}[htp]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/about our community pie chart.png}
 \caption{How TT04 submitters identified themselves.}
-\label{fig:TT02_submitters}
+\label{fig:TT04_submitters}
 \end{figure}

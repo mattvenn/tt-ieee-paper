@@ -1,18 +1,18 @@
 \section{Beyond the Scanchain}
 \label{sec:beyond_scanchain}
-The biggest limitation of the Tiny Tapeout architecture was the IO latency.
+The biggest limitation of the Tiny Tapeout architecture was the IO bandwidth and latency.
 For Tiny Tapeout 4 a new architecture was needed, and a series of proposals was gathered from the community.
 An online video call was held and the 10 proposals discussed.
-The winning design was a fairly straightforward multiplexer design.
+The winning design was a fairly straightforward multiplexer design shown in Fig.~\ref{fig:multiplexer_design}.
 
 \begin{figure}[htp]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/mux architecture.png}
-\caption{The multiplexer design.}
+\caption{Simplified diagram of the multiplexer architecture.}
 \label{fig:multiplexer_design}
 \end{figure}
 
-The physical layout consists of a central controller connected up and down to two vertical spines.
+The physical layout (shown in Fig.~\ref{fig:TT03_5_test_design}) consists of a central controller connected up and down to two vertical spines.
 Twenty-four horizontal muxes connect to the spine with each supporting 16 designs.
 This allows up to 384 separate single tile designs.
 Multiple tile designs were also enabled, allowing a maximum project size of \(2 \times 8\) tiles or \(1359 \times 225 \mu m\) - around 20,000 logic cells.
@@ -24,7 +24,7 @@ Multiple tile designs were also enabled, allowing a maximum project size of \(2 
 \label{fig:TT03_5_test_design}
 \end{figure}
 
-Another major limitation of TT1 to 3 was the small number of IO.
+Another major limitation of TT01 to TT03 was the small number of IO.
 The scan controller used 9 GPIOs to select the currently active design, which, while simplifying the demo board, wasted valuable pins.
 With TT04, the parallel design selection was dropped in favor of a serial protocol.
 The extra pins were then used as bidirectional pins, giving each design clock, reset, and 24 IO.
