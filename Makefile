@@ -1,19 +1,4 @@
-TEX=pdflatex -shell-escape -interaction=nonstopmode -file-line-error
-BIB=bibtex
+all: paper_TT.pdf
 
-STEM=paper_TT
-
-TARGET=$(STEM).pdf
-SRC = $(STEM).tex
-AUX = $(STEM).aux
-
-TARGET:
-	$(TEX) $(SRC)
-	$(BIB) $(AUX)
-	$(TEX) $(SRC)
-	$(TEX) $(SRC)
-
-
-.PHONY: clean
-clean:
-	rm -f $(TARGET) $(AUX) *.bbl *.blg *.log *.out
+paper_TT.pdf: *tex *bib
+	latexmk -pdf paper_TT.tex
