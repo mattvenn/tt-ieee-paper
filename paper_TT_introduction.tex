@@ -1,7 +1,6 @@
 \section{Introduction}
 \label{sec:introduction}
-\IEEEPARstart{T}{inyTapeout}
- is multi project chip platform that makes it easier and cheaper than ever to get ASIC designs manufactured.
+\IEEEPARstart{T}{inyTapeout} is a multi project chip platform that makes it easier and cheaper than ever to get ASIC designs manufactured.
 
 Open source tools and process design kit (PDK~\cite{pdk}) are used, so no licenses or NDAs are needed. As the tools are run in the cloud, no software needs to be installed on the user's machine. However, as long as the template structure is followed, proprietary tools can be used.
 
@@ -11,9 +10,9 @@ Additionally, each project submits documentation for their design, collected to 
 
 By separating the cost of area and the physical chip, a group can share the cost of chip packaging and PCBs, while still getting to test and measure all the designs on the chip. In a classroom setting this helps to reduce the overall price, as students can share a smaller number of PCBs while each submitting their own design.
 
-Each tile (Fig.~\ref{fig:render_cells_in_use}) is approximately $160\times \qty{100}{\micro\meter\squared}$, enough for around 1000 logic gates. Tiles can be joined to enable larger designs. Analog and mixed signal support is being added for TT06.
+Each tile (Fig.~\ref{fig:render_cells_in_use}) is approximately $160 \times \qty{100}{\micro\meter\squared}$, enough for around 1000 logic gates. Tiles can be joined to enable larger designs. Analog and mixed signal support is being added for TT06.
 
-Community engagement has been strong with 756 designs submitted over the first 5 shuttles. Some highlights are listed in section ~\ref{sec:silicon_showcase}.
+Community engagement has been strong with 756 designs submitted over the first 5 shuttles. Some highlights are listed in section~\ref{sec:silicon_showcase}.
 The online chat server has 1000 members with 1600 subscribed to the mailing list. Submitters tend to identify as hobbyists, students and teachers as shown in Fig.~\ref{fig:TT04_submitters}.
 
 The first~\cite{firstshuttle} free and experimental shuttle with 152 designs was submitted to the seventh Google sponsored~\cite{googlesponsored} lottery multi project wafer (MPW) shuttle in September 2022.
@@ -21,9 +20,9 @@ The next 4 shuttles combined 582 designs and were sponsored by and manufactured 
 
 The rest of this paper will discuss the TinyTapeout design flow, multiplexer evolution, circuit boards, silicon results and next steps.
 
-\begin{table*}[htbp]
+\begin{table*}[!t]
 \centering
-\caption{Statistics for each of the TinyTapeout shuttle runs.}
+\caption{Statistics for Each of the TinyTapeout Shuttle Runs}
 \label{tab:tinytapeout}
 \begin{tabularx}{\textwidth}{@{}l *{6}{X}@{}}
 \toprule
@@ -39,14 +38,14 @@ TT06 & 2024-02-01 & 2024-04-19 & 2404  & TBD & TBD        & TBD \\
 \end{tabularx}
 \end{table*}
 
-\begin{figure}[htp]
+\begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/gh action gds layout.png}
 \caption{2D render of a single tile}
 \label{fig:render_cells_in_use}
 \end{figure}
 
-\begin{figure}[htp]
+\begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/about our community pie chart.png}
 \caption{How TT04 submitters identified themselves.}

@@ -5,7 +5,7 @@ For Tiny Tapeout 4 a new architecture was needed, and a series of proposals was 
 An online video call was held and the 10 proposals discussed.
 The winning design was a fairly straightforward multiplexer design shown in Fig.~\ref{fig:multiplexer_design}.
 
-\begin{figure}[htp]
+\begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/mux architecture.png}
 \caption{Simplified diagram of the multiplexer architecture.}
@@ -15,9 +15,9 @@ The winning design was a fairly straightforward multiplexer design shown in Fig.
 The physical layout (shown in Fig.~\ref{fig:TT03_5_test_design}) consists of a central controller connected up and down to two vertical spines.
 Twenty-four horizontal muxes connect to the spine with each supporting 16 designs.
 This allows up to 384 separate single tile designs.
-Multiple tile designs were also enabled, allowing a maximum project size of \(8 \times 2\) tiles or \(1359 \times 225 \mu m\) - around 20,000 logic cells.
+Multiple tile designs were also enabled, allowing a maximum project size of $8 \times 2$ tiles or $1359 \times \qty{225}{\um\squared}$---around \num{20000} logic cells.
 
-\begin{figure}[htp]
+\begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt3p5 layout.png}
 \caption{The TT03.5 test design.}
@@ -29,7 +29,7 @@ The scan controller used 9 GPIOs to select the currently active design, which, w
 With TT04, the parallel design selection was dropped in favor of a serial protocol.
 The extra pins were then used as bidirectional pins, giving each design clock, reset, and 24 IO.
 
-\begin{table}[htp]
+\begin{table}[!t]
 \centering
 \caption{Comparison between TT03 and TT04}
 \label{tab:comparison_TT03_TT04}
@@ -37,11 +37,11 @@ The extra pins were then used as bidirectional pins, giving each design clock, r
 \toprule
 Parameters & Tiny Tapeout 3 & Tiny Tapeout 4 \\
 \midrule
-Max clock speed & \(12.5 kHz\) & \(50 MHz\) \\
-Max design size & \(150 \times 170 \mu m\) & \(1359 \times 225 \mu m\) \\
-Input pins & \(8\) & \(10\) \\
-Output pins & \(8\) & \(8\) \\
-Bidirectional I/O pins & None & \(8\) \\
+Max clock speed & \qty{12.5}{\kHz} & \qty{50}{\MHz} \\
+Max design size & $150 \times \qty{170}{\um\squared}$ & $1359 \times \qty{225}{\um\squared}$ \\
+Input pins & 8 & 10 \\
+Output pins & 8 & 8 \\
+Bidirectional I/O pins & None & 8 \\
 Custom GDS file & \xmark & \checkmark \\
 \bottomrule
 \end{tabular}
