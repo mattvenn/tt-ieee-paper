@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.1.24)  26 JAN 2024 12:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.1.24)  26 JAN 2024 12:52
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -746,8 +746,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--72
  []
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 84--86
-[]\OT1/ptm/m/n/8 ``Locally in-stal-ing the tools,'' []$https : / / docs . googl
+Underfull \hbox (badness 3492) in paragraph at lines 84--86
+[]\OT1/ptm/m/n/8 ``Locally in-stalling the tools,'' []$https : / / docs . googl
 e . com / document / d /
  []
 
@@ -824,7 +824,7 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/zapfding/uzdr.pfb>
-Output written on paper_TT.pdf (7 pages, 17171943 bytes).
+Output written on paper_TT.pdf (7 pages, 17171968 bytes).
 PDF statistics:
  377 PDF objects out of 1000 (max. 8388607)
  314 compressed objects within 4 object streams
