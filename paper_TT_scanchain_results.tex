@@ -18,7 +18,7 @@ After measuring the clock asymmetry (Fig.~\ref{fig:TT02_clock_out}) and maximum 
 
 Some designs didn’t function as expected, which in most cases was due to faults in the submitted design.
 
-As well as \(82\) Verilog designs, \(64\) used the Wokwi graphical editor, \(6\) used alternative HDLs like Amaranth\cite{amaranth} and Chisel\cite{chisel}.
+As well as \(82\) Verilog designs, \(64\) used the Wokwi graphical editor, \(6\) used alternative HDLs like VHDL, Amaranth\cite{amaranth} and Chisel\cite{chisel}.
 Some Wokwi designs using combinational logic in clock paths (Fig.~\ref{fig:failed_design_comb_logic}) worked in simulation but failed in hardware.
 This was due to the lack of timing data in the simulation, and wasn’t detected by STA because the clock paths were not known.
 A detailed analysis has yet to be carried out.

@@ -80,6 +80,10 @@
 ``{Wokwi Automated Testing - TinyTapeout},''
   \url{https://tinytapeout.com/digital_design/wokwi_automated_testing/}.
 
+\bibitem{localinstall}
+``{Locally instaling the tools},''
+  \url{https://docs.google.com/document/d/1aUUZ1jthRpg4QURIIyzlOaPWlmQzr-jBn3wZipVUPt4}.
+
 \bibitem{updateiodesign}
 ``{Updating Inputs and Outputs of a Design - TinyTapeout Repository},''
   \url{https://github.com/TinyTapeout/tinytapeout-02/blob/tt02/INFO.md#updating-inputs-and-outputs-of-a-specified-design}.
@@ -107,6 +111,12 @@
 \bibitem{siliconalive}
 ``{TT02 Silicon is Alive! - Zero to ASIC Course Blog},''
   \url{https://www.zerotoasiccourse.com/post/tt02-silicon-is-alive/}.
+
+\bibitem{amaranth}
+``{Amaranth},'' \url{https://amaranth-lang.org/docs/amaranth/latest/}.
+
+\bibitem{chisel}
+``{Chisel},'' \url{https://www.chisel-lang.org/}.
 
 \bibitem{tinytapeout03p5}
 ``{TinyTapeout 03p5 - GitHub Repository},''
