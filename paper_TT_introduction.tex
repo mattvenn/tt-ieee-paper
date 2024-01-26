@@ -3,21 +3,21 @@
 \IEEEPARstart{T}{inyTapeout}
  is multi project chip platform that makes it easier and cheaper than ever to get ASIC designs manufactured.
 
-Open source tools and process design kit (PDK~\cite{pdk}) are used, so no licenses or NDAs are needed. As the tools are run in the cloud, no software needs to be installed on the user's machine. However, as long as the template structure is followed, proprietry tools can be used.
+Open source tools and process design kit (PDK~\cite{pdk}) are used, so no licenses or NDAs are needed. As the tools are run in the cloud, no software needs to be installed on the user's machine. However, as long as the template structure is followed, proprietary tools can be used.
 
 Around 400 designs are multiplexed to 24 general purpose input/output (GPIO) pins, and after manufacture the chips are mounted to a demonstration board for easy testing. Each chip contains every design, which can be activated and tested in turn.
 
-Each tile (Fig.~\ref{fig:render_cells_in_use}) is approximately $100\times 160 \mu \text{m}$, enough for around 1000 logic gates. Tiles can be joined to enable larger designs.
+Additionally, each project submits documentation for their design, collected to form a printable datasheet~\cite{datasheet} along with an online index at TinyTapeout.com/runs/~\cite{tinytapeoutruns}. The datasheet helps participants to explore each other's design in addition to their own.
 
 By separating the cost of area and the physical chip, a group can share the cost of chip packaging and PCBs, while still getting to test and measure all the designs on the chip. This helps to reduce the overall price for a class, as they can share a smaller number of PCBs while each submitting their own design.
 
-Documentation submitted with each project forms a printable datasheet~\cite{datasheet} as well as an online index at TinyTapeout.com/runs/~\cite{tinytapeoutruns}.
+Each tile (Fig.~\ref{fig:render_cells_in_use}) is approximately $100\times 160 \mu \text{m}$, enough for around 1000 logic gates. Tiles can be joined to enable larger designs. Analog and mixed signal support is being added for TT06.
 
 Community engagement has been strong with 756 designs submitted over the first 5 shuttles. Some highlights are listed in section ~\ref{sec:silicon_showcase}.
 The online chat server has 1000 members with 1600 subscribed to the mailing list. Submitters tend to identify as hobbyists, students and teachers as shown in Fig.~\ref{fig:TT04_submitters}.
 
 The first~\cite{firstshuttle} free and experimental shuttle with 152 designs was submitted to the seventh Google sponsored~\cite{googlesponsored} lottery multi project wafer (MPW) shuttle in September 2022.
-The next 4 shuttles combined 582 designs and were sponsored by and manufactured with the Efabless~\cite{efabless} chipIgnite MPW service.
+The next 4 shuttles combined 582 designs and were sponsored by and manufactured with the Efabless~\cite{efabless} chipIgnite MPW service. Table~\ref{tab:tinytapeout} shows a summary of all the shuttle runs to date.
 
 \begin{table*}[htbp]
 \centering

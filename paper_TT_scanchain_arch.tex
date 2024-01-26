@@ -27,8 +27,7 @@ This arrangement allows the loading of data into any of the designs, and then ca
 
 While relatively easy to implement, the downside is the latency.
 The more designs in the chain, the longer it takes to send and receive data.
-
-Assuming a \(50 MHz\) scan chain clock, \(250\) designs with \(8\) inputs and \(8\) outputs, the maximum refresh rate is \(50M / (8 \times 250) = 25kHz\).
+For example, assuming a \(50 MHz\) scan chain clock, \(250\) designs with \(8\) inputs and \(8\) outputs, the maximum refresh rate is \(50M / (8 \times 250) = 25kHz\).
 
 TT01’s scan chain was embedded into each design, which meant that a user could unintentionally remove it, breaking the chain.
 This risk was mitigated with a formal\cite{tinytapeoutscan} equivalence check - proving the chain was present in the submitted design.
@@ -47,7 +46,7 @@ Another concern was hold violations due to the large number of serially connecte
 After static timing analysis (STA) it was discovered that the clock duty cycle could change substantially due to the \(500\) sequential clock drivers. Depending on the clock buffers and capacitance between each design, the clock duty cycle could either increase or decrease, with this effect accumulated over the chain.
 
 For TT01 and TT02 each design used two clock buffers, with the internal flops driven after the first buffer.
-TT03 used inverting clock buffers, with only one between the clock in and out. Fig. ~\ref{fig:TT02_vs_TT03} shows a comparison between the TT02 and TT03 clock buffer designs.
+TT03 used inverting clock buffers, with only one between the clock in and out. Fig. ~\ref{fig:TT02_vs_TT03} shows a comparison between the TT02 and TT03 clock buffer designs.  By inverting the clock between each design, any asymmetry in the clock pulse is evenly spread across the negative and positive cycles.
 
 \begin{figure}[htp]
 \centering
@@ -56,6 +55,5 @@ TT03 used inverting clock buffers, with only one between the clock in and out. F
 \label{fig:TT02_vs_TT03}
 \end{figure}
 
-By inverting the clock between each design, any asymmetry in the clock pulse is evenly spread across the negative and positive cycles.
 
 The verification effort\cite{verificationmd} was broad and included a community review, register transfer level (RTL) and gate level (GL) simulation, Formal Verification\cite{sby}, STA, layout vs schematic (LVS), DRC, and device level static verification\cite{cvc}.
