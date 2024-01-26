@@ -1,7 +1,7 @@
-\section{Beyond the Scanchain}
+\section{Beyond the Scan Chain}
 \label{sec:beyond_scanchain}
-The biggest limitation of the scanchain based architecture was the IO bandwidth and latency.
-For Tiny Tapeout 4 a new architecture was needed, and a series of proposals was gathered from the community.
+The biggest limitation of the scan chain based architecture was the IO bandwidth and latency.
+For TinyTapeout 4 a new architecture was needed, and a series of proposals was gathered from the community.
 An online video call was held and the 10 proposals discussed.
 The winning design was a fairly straightforward multiplexer design shown in Fig.~\ref{fig:multiplexer_design}.
 
@@ -15,7 +15,7 @@ The winning design was a fairly straightforward multiplexer design shown in Fig.
 The physical layout (shown in Fig.~\ref{fig:TT03_5_test_design}) consists of a central controller connected up and down to two vertical spines.
 Twenty-four horizontal muxes connect to the spine with each supporting 16 designs.
 This allows up to 384 separate single tile designs.
-Multiple tile designs were also enabled, allowing a maximum project size of $8 \times 2$ tiles or $1359 \times \qty{225}{\um\squared}$---around \num{20000} logic cells.
+Multiple tile designs were also enabled, allowing a maximum project size of $8 \times 2$ tiles or $1359 \times \qty{225}{\um\squared}$---around \num{20000} logic cells. Table~\ref{tab:comparison_TT03_TT04} shows the key differences between TT03 and TT04.
 
 \begin{figure}[!t]
 \centering
@@ -35,7 +35,7 @@ The extra pins were then used as bidirectional pins, giving each design clock, r
 \label{tab:comparison_TT03_TT04}
 \begin{tabular}{@{}lcc@{}}
 \toprule
-Parameters & Tiny Tapeout 3 & Tiny Tapeout 4 \\
+Parameters & TT03 & TT04 \\
 \midrule
 Max clock speed & \qty{12.5}{\kHz} & \qty{50}{\MHz} \\
 Max design size & $150 \times \qty{170}{\um\squared}$ & $1359 \times \qty{225}{\um\squared}$ \\
