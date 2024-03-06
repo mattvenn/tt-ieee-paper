@@ -2,7 +2,9 @@
 \label{sec:circuit_board}
 After manufacture, the chips are mounted onto small carrier boards with 0.1~inch headers. This allows people with limited surface mount technology (SMT) assembly experience to build their own demonstration boards.
 
-The carrier fits onto the demonstration board shown in Fig.~\ref{fig:demonstration_board} which provides:
+The carrier fits onto the demonstration board shown in Fig.~\ref{fig:demonstration_board}. The demonstration boards are designed primarily for ease of use by beginners, with enough flexibility for power users. As all signals are below \qty{50}{\MHz}, no special layout was needed.
+
+The demonstration board provides:
 \begin{itemize}
 \item USB-C for power connection,
 \item \qty{1.8}{\V} and \qty{3.3}{\V} power supplies for core and IO,
@@ -12,7 +14,7 @@ The carrier fits onto the demonstration board shown in Fig.~\ref{fig:demonstrati
 \item A 9-way DIP switch for design selection,
 \item A 7-segment LED display for the outputs,
 \item Headers for all IO, including 2 standard Digilent ports (PMOD),
-\item A header to select internal or external clock,
+\item A header to select the internal clock or provide one externally,
 \item A header to select internal or external scan chain driver,
 \item A header to engage an automatic clock divider in input pin 0.
 \end{itemize}
