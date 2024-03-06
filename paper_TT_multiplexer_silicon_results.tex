@@ -23,7 +23,7 @@ After silicon was received, the worst round trip latency was measured to be \qty
 \label{fig:VGA_clock_design_TT03_5_silicon}
 \end{figure}
 
-The new chip pinout and serial design selection required a new demo board (Fig.~\ref{fig:TT04plus_demo_board}) that included an easy way to select the design.
+The new chip pinout and serial design selection required a new demonstration board (Fig.~\ref{fig:TT04plus_demo_board}) that included an easy way to select the design.
 The RP2040 microcontroller was chosen as a co-processor as it allows:
 
 \begin{itemize}
@@ -48,6 +48,8 @@ The RP2040 microcontroller was chosen as a co-processor as it allows:
 
 An additional PMOD expansion port was added for the bidirectional pins, and the community has started to standardize on pinouts~\cite{pinouts} making it easier to test each other's designs.
 A new repository was created to house user-contributed PMODs~\cite{awesomepmods}, for example the VGA PMOD shown in Fig.~\ref{fig:user_contributed_VGA_PMOD}.
+
+An additional set of 3 PMOD expansion ports were added that mixed input and outputs, allowing the most common standard PMODs to be used. For more information about the circuit board, pinout and PMOD support see the repository~\cite{tt04demoboard}.
 
 \begin{figure}[!t]
 \centering
