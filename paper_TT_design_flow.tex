@@ -1,40 +1,39 @@
 \section{Design Flow}
 \label{sec:design_flow}
 
-Design entry is done mostly with Verilog or Wokwi~\cite{wokwi}.
-Wokwi is a web based schematic based editor that is an easy way to get started for people with no prior hardware description language (HDL) experience.
-The Tiny Tapeout website~\cite{tinytapeout} includes a basic getting started guide for drawing circuits available in English and Spanish.
+Tiny Tapeout designs are primarily developed in the Verilog Hardware Description Language (HDL) or Wokwi~\cite{wokwi}.
+Wokwi is a web based visual schematic editor for hardware description, designed as an easier way for individuals with no prior HDL experience to get started.
+The TinyTapeout website~\cite{tinytapeout} includes a basic Wokwi getting started guide, demonstrating how to use the tool to draw circuits, which is made available in English and Spanish.
 
-The design flow consists of templating a GitHub~\cite{github} repository, adding a design, waiting for the tests and binary layout files (GDS~\cite{gds}) generation to complete, then submitting to a quarterly shuttle.
+The design flow has the participant create a GitHub~\cite{github} source code repository based on provided templates then add their ASIC design. This triggers automated tests and the generation of binary layout files in GDSII~\cite{gds}. If all tests pass and the binary layout files are correctly generated, the design is then submitted to a quarterly shuttle for production in silicon.
 
-The GitHub templates\cite{verilogtemplate} make use of GitHub Actions\cite{githubactions}---an automatic continuous integration system that is triggered every time the repository is updated.
+The TinyTapeout GitHub templates\cite{verilogtemplate} make use of GitHub Actions\cite{githubactions}---an automatic continuous integration system triggered every time the repository is updated. This reduces duplicated effort and makes it possible for TinyTapeout to support large numbers of participants without excessive technical overhead.
 
-There are 4 main jobs:
+There are four main jobs in the continuous integration system:
 
 \begin{enumerate}
-	\item GDS: installs OpenLane\cite{openlane} and the Sky130\cite{skywaterpdk} PDK, builds the GDS and generates a summary of the design (Fig.~\ref{fig:summary_table_GDS_job}). The summary includes utilization, standard cells used, a 2D render (Fig.~\ref{fig:render_cells_in_use}) and an interactive 3D viewer (Fig.~\ref{fig:interactive_3D_viewer}).
-This job can also optionally run a gate-level verification.
-	\item Verification: installs the YosysHQ open source CAD suite which includes many common electronic design automation (EDA) tools.
-Then iVerilog\cite{iverilog} and cocotb\cite{cocotb} are used to run any testbenches included.
+	\item GDS: installs OpenLane\cite{openlane} and the SkyWater Sky130\cite{skywaterpdk} PDK, builds the binary layout files, and generates a summary of the design (Fig.~\ref{fig:summary_table_GDS_job}). The summary includes utilization, standard cells used, a 2-D render (Fig.~\ref{fig:render_cells_in_use}) and an interactive 3-D viewer (Fig.~\ref{fig:interactive_3D_viewer}).
+This job can also optionally run a gate-level verification of the design.
+	\item Verification: installs the YosysHQ open source Computer-Aided Design (CAD) suite, which includes many common electronic design automation (EDA) tools; uses iVerilog\cite{iverilog} and cocotb\cite{cocotb} to run included testbenches.
 	\item Documentation: generates a preview of the documentation.
-	\item Precheck: a number of tests are run to make sure that the design doesn’t cause design rule check (DRC) errors after integration into the chip.
+	\item Precheck: runs Design Rule Check (DRC) tests to ensure the design can be integrated into the multi project chip.
 \end{enumerate}
 
-Successful GDS, Documentation, and Precheck jobs are required to submit to a shuttle.
-Verification is optional but highly encouraged. Wokwi designs can make use of an integrated truth table testing system\cite{automatedtesting}.
+Successful GDS, Documentation, and Precheck job completion are all required for a design to be submitted to a shuttle for production.
+Verification is optional but highly encouraged. Submissions designed in Wokwi are able to make use of its integrated truth table testing system\cite{automatedtesting}.
 
-While the process can be done entirely in the browser, it’s also possible to install a local copy of the tools\cite{localinstall}, which can help to reduce iteration time, especially for tests and verification.
+While the TinyTapeout continuous integration system can be run entirely in the user's web browser, it is also possible to install a local copy of the tools\cite{localinstall} on a participant's computer. Locally installed tools can help to reduce the time between design iterations, especially for the test and verification jobs.
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/gh action cell stats.png}
-\caption{The summary table of the GDS job.}
+\caption{A summary table from the GDS continuous integration job.}
 \label{fig:summary_table_GDS_job}
 \end{figure}
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/gh action gds 3d view.png}
-\caption{The interactive 3D viewer.}
+\caption{The interactive 3-D viewer.}
 \label{fig:interactive_3D_viewer}
 \end{figure}
