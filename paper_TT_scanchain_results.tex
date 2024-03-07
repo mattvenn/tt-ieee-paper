@@ -1,26 +1,26 @@
 \section{Scan Chain Silicon Results}
 \label{sec:scan_chain_res}
 
-TT02 chips were received in October 2023, 11 months after the chips were submitted for manufacture on Efabless chipIgnite 2211Q.
-The chips were tested for the first time in public on a livestream~\cite{siliconalive}.
-The chain was validated, and a few of the designs were shown to be working.
+Tiny Tapeout 02 chips were received in October 2023, 11 months after the chips were submitted for manufacture on the Efabless chipIgnite 2211Q shuttle.
+The chips were tested for the first time on a public livestream~\cite{siliconalive}.
+During this testing the chain was validated and a small number of the designs were demonstrated to be working.
+In further testing following the livestream another 30 designs were and shown to be working.
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt02_clock_out.png}
-\caption{Measurement from TT02 silicon, with input clock in yellow and the distorted output clock in blue.}
+\caption{Measurement from Tiny Tapeout 02 silicon, with input clock in yellow and the distorted output clock in blue.}
 \label{fig:TT02_clock_out}
 \end{figure}
 
-In the following days another 30 designs were tested and shown to be working.
+After measuring the clock asymmetry (Fig.~\ref{fig:TT02_clock_out}) and maximum frequency it was decided to run the production boards with a \qty{20}{\MHz} oscillator, resulting in a \qty{10}{\MHz} scan chain clock and a \qty{5}{\kHz} IO update rate in order to maximize stability.
 
-After measuring the clock asymmetry (Fig.~\ref{fig:TT02_clock_out}) and maximum frequency it was decided to run the production boards with a \qty{20}{\MHz} oscillator, resulting in a \qty{10}{\MHz} scan chain clock and a \qty{5}{\kHz} IO update rate.
+Some Tiny Tapeout 02 designs did not function as expected; in most cases this was determineted to be due to faults in the submitted design.
 
-Some designs didn’t function as expected, which in most cases was due to faults in the submitted design.
+Of the designs submitted 82 used the Verilog HDL, 64 were created using the Wokwi graphical editor, and six used alternative HDLs including VHDL, Amaranth~\cite{amaranth}, and Chisel~\cite{chisel}.
 
-As well as 82 Verilog designs, 64 used the Wokwi graphical editor, 6 used alternative HDLs like VHDL, Amaranth~\cite{amaranth} and Chisel~\cite{chisel}.
-Some Wokwi designs using combinational logic in clock paths (Fig.~\ref{fig:failed_design_comb_logic}) worked in simulation but failed in hardware.
-This was due to the lack of timing data in the simulation, and wasn’t detected by STA because the clock paths were not known. A detailed analysis has yet to be carried out.
+Some of the designs created using Wokwi using combinational logic in clock paths (Fig.~\ref{fig:failed_design_comb_logic}) worked in simulation but failed in hardware.
+This was determinted to be due to the lack of timing data in the simulation, and wasn not detected by STA because the clock paths were not known. A detailed analysis on these failures has yet to be carried out.
 
 \begin{figure}[!t]
 \centering
@@ -31,11 +31,11 @@ This was due to the lack of timing data in the simulation, and wasn’t detected
 
 At the time of writing, PCBs are in production and are expected to ship to customers by the end of January 2024.
 
-Tiny Tapeout 3 silicon was received in January 2024, and the updated scan chain shows a more symmetric (Fig.~\ref{fig:TT03_silicon_measurement}) output clock at the end of the chain. This will allow a faster scan chain clock, resulting in a faster update frequency.
+Silicon from Tiny Tapeout 3 production was received in January 2024. The updated scan chain design shows a more symmetric output clock at the end of the chain (Fig.~\ref{fig:TT03_silicon_measurement}). The improved clock symmetry will allow for the use of a faster scan chain clock, resulting in a faster update frequency.
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt03_clock_out.png}
-\caption{Measurement from TT03 silicon.}
+\caption{Measurement from Tiny Tapeout 03 silicon.}
 \label{fig:TT03_silicon_measurement}
 \end{figure}
