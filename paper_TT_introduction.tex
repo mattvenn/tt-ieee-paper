@@ -26,14 +26,14 @@ The rest of this paper will discuss the TinyTapeout design flow, multiplexer evo
 \label{tab:tinytapeout}
 \begin{tabularx}{\textwidth}{@{}l *{8}{X}@{}}
 \toprule
-\textbf{Run} & \textbf{Launched} & \textbf{Shuttle} & \textbf{Designs} & \textbf{Delivery date} & \textbf{Architecture} & \textbf{Number of IOs} & \textbf{Analog support} \\
+\textbf{Run} & \textbf{Launched} & \textbf{Shuttle} & \textbf{Designs} & \textbf{Delivery date} & \textbf{Architecture} & \textbf{Number of IOs} & \textbf{IO bandwidth} & \textbf{Analog support} \\
 \midrule
-TT01 & 2022-08-17  & MPW7  & 152 & n/a        & Scan chain                & 16 & no  \\
-TT02 & 2022-11-09  & 2211Q & 165 & 2024-01-30 & Scan chain                & 16 & no  \\
-TT03 & 2023-03-01  & 2304C & 249 & 2024-02-28 & Scan chain inverted clock & 16 & no  \\
-TT04 & 2023-07-01  & 2309  & 143 & 2024-04-15 & Mux                       & 26 & no  \\
-TT05 & 2023-09-11  & 2311  & 174 & 2024-05-12 & Split Mux                 & 26 & no  \\
-TT06 & 2024-02-01  & 2404  & TBD & 2024-11-30 & Split Mux                 & 38 & yes \\
+TT01 & 2022-08-17  & MPW7  & 152 & n/a        & Scan chain                & 16 & \qty{5}{\kHz}    & no  \\
+TT02 & 2022-11-09  & 2211Q & 165 & 2024-01-30 & Scan chain                & 16 & \qty{5}{\kHz}    & no  \\
+TT03 & 2023-03-01  & 2304C & 249 & 2024-02-28 & Scan chain inverted clock & 16 & \qty{10}{\kHz}    & no  \\
+TT04 & 2023-07-01  & 2309  & 143 & 2024-04-15 & Mux                       & 26 & \qty{50}{\MHz}   & no  \\
+TT05 & 2023-09-11  & 2311  & 174 & 2024-05-12 & Split Mux                 & 26 & \qty{50}{\MHz}   & no  \\
+TT06 & 2024-02-01  & 2404  & TBD & 2024-11-30 & Split Mux                 & 38 & \qty{50}{\MHz}   & yes \\
 \bottomrule
 \end{tabularx}
 \end{table*}

@@ -3,7 +3,7 @@
 The biggest limitation of the scan chain based architecture was the IO bandwidth and latency.
 A new architecture was needed for TinyTapout 4, so proposals were gathered from the community.
 An online video call was held and the 10 proposals discussed.
-The winning design was a fairly straightforward multiplexer design shown in Fig.~\ref{fig:multiplexer_design}.
+The winning design was a fairly straightforward multiplexer design shown in Fig.~\ref{fig:multiplexer_design}. It was chosen as the simplest to implement while providing the most benefit in terms of additional IOs and higher bandwidth.
 
 \begin{figure}[!t]
 \centering
@@ -37,7 +37,7 @@ The extra pins were then used as bidirectional pins, giving each design clock, r
 \toprule
 Parameters & TT03 & TT04 \\
 \midrule
-Max clock speed & \qty{12.5}{\kHz} & \qty{50}{\MHz} \\
+Max clock speed & \qty{8}{\kHz} & \qty{50}{\MHz} \\
 Max design size & $150 \times \qty{170}{\um\squared}$ & $1359 \times \qty{225}{\um\squared}$ \\
 Input pins & 8 & 10 \\
 Output pins & 8 & 8 \\
