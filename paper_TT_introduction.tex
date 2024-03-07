@@ -1,28 +1,28 @@
 \section{Introduction}
 \label{sec:introduction}
-\IEEEPARstart{T}{inyTapeout} is a multi project chip platform that makes it easier and cheaper than ever to get ASIC designs manufactured.
+\IEEEPARstart{T}{inyTapeout} is a multi project chip platform that makes it easier and cheaper to get Application Specific Integrated Circuit (ASIC) designs manufactured.
 
-Open source tools and process design kit (PDK~\cite{pdk}) are used, so no licenses or NDAs are needed. As the tools are run in the cloud, no software needs to be installed on the user's machine. However, as long as the template structure is followed, proprietary tools can be used.
+Open source tools and Process Design Kits (PDK~\cite{pdk}) are used so no licenses or Non Disclosure Agreement (NDAs) are required. As the tools run on remote cloud servers no software needs to be installed locally on the user's machine. As long as the template structure is followed, however, TinyTapeout does support the use of proprietary tools.
 
-Around 400 open source designs are multiplexed to 24 general purpose input/output (GPIO) pins, and after manufacture the chips are mounted to a demonstration board for easy testing. Each chip contains every design, which can be activated and tested in turn.
+Each TinyTapeout ASIC production run sees around 400 open source designs multiplexed to 24 General Purpose Input/Output (GPIO) pins. After manufacture the resulting chip is mounted to a demonstration board for ease of testing. Each chip contains a copy of every design, which can be selected and tested in turn.
 
-Additionally, each participant submits documentation for their design, collected to form a printable datasheet~\cite{datasheet} along with an online index at TinyTapeout.com/runs/~\cite{tinytapeoutruns}. The datasheet helps participants to explore each other's design in addition to their own.
+At the same time each participant submits documentation for their design, which used to create a printable datasheet~\cite{datasheet} along with an online project index at TinyTapeout.com/runs/~\cite{tinytapeoutruns}. The datasheet helps participants explore other designs on the chip in addition to their own.
 
-By separating the cost of area and the physical chip, a group can share the cost of chip packaging and PCBs, while still getting to test and measure all the designs on the chip. In a classroom setting this helps to reduce the overall price, as students can share a smaller number of PCBs while each submitting their own design.
+By separating the cost of area on a silicon wafer and the finished physical chip, the TinyTapout participant group is able to share the cost of chip packaging and circuit board manufacture while still being able to test and measure all the designs on the chip. For use in educational settings it is possible for multiple students to submit individual designs while sharing the finished chips and circuit boards, reducing the cost still further.
 
-Each tile (Fig.~\ref{fig:render_cells_in_use}) is approximately $160 \times \qty{100}{\micro\meter\squared}$, enough for around 1000 logic gates on the Skywater 130nm open source PDK. Tiles can be joined to enable larger designs. Analog and mixed signal support is being added for the next shuttle.
+Each TinyTapeout tile (Fig.~\ref{fig:render_cells_in_use}) is approximately $160 \times \qty{100}{\micro\meter\squared}$. This provides enough room for around 1,000 logic gates when built upon the SkyWater 130nm open source PDK. Multiple tiles can be interconnected to enable larger designs, while analog and mixed signal support is on the roadmap for the next shuttle.
 
-Community engagement has been strong with 756 designs submitted over the first 5 shuttles. Some highlights are listed in section~\ref{sec:silicon_showcase}.
-The online chat server has 1000 members with 1600 subscribed to the mailing list. Submitters tend to identify as hobbyists, students and teachers as shown in Fig.~\ref{fig:TT04_submitters}.
+Community engagement in TinyTapeout has been strong, with 756 designs submitted over the first five shuttles. A curated selection of projects is provided in section~\ref{sec:silicon_showcase}.
+An online chat server for participants has 1,000 members with 1,600 subscribers to the project's mailing list. Individuals submitting designs to TinyTapeout tend to self identify as hobbyists, students, and teachers, as shown in Fig.~\ref{fig:TT04_submitters}.
 
-The first~\cite{firstshuttle} free and experimental shuttle with 152 designs was submitted to the seventh Google sponsored~\cite{googlesponsored} lottery multi project wafer (MPW) shuttle in September 2022.
-The next 4 shuttles combined 582 designs and were sponsored by and manufactured with the Efabless~\cite{efabless} chipIgnite MPW service. Table~\ref{tab:tinytapeout} shows a summary of all the shuttle runs to date.
+The first~\cite{firstshuttle} TinyTapeout production run, which was provided as a free and experimental effort with a total of 152 designs, was submitted to the seventh Google-sponsored~\cite{googlesponsored} lottery based Multi Project Wafer (MPW) shuttle in September 2022.
+The next four shuttles combined a total of 582 designs, all sponsored by and manufactured through the Efabless~\cite{efabless} chipIgnite MPW service. Table~\ref{tab:tinytapeout} shows a summary of all TinyTapeout shuttle runs to date.
 
-The rest of this paper will discuss the TinyTapeout design flow, multiplexer evolution, circuit boards, silicon results and next steps.
+The rest of this paper will detail the TinyTapeout design flow, multiplexer evolution, circuit board design, the results of post production silicon testing, and the project's next steps.
 
 \begin{table*}[!t]
 \centering
-\caption{Statistics for Each of the TinyTapeout Shuttle Runs}
+\caption{Statistics from all TinyTapeout shuttle runs to date}
 \label{tab:tinytapeout}
 \begin{tabularx}{\textwidth}{@{}l *{6}{X}@{}}
 \toprule
@@ -41,13 +41,13 @@ TT06 & 2024-02-01  & 2404  & TBD & 2024-11-30 & Split Mux \\
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/gh action gds layout.png}
-\caption{2D render of a single tile}
+\caption{A 2-D render of a single TinyTapeout tile}
 \label{fig:render_cells_in_use}
 \end{figure}
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/about our community pie chart.png}
-\caption{How TT04 submitters identified themselves.}
+\caption{Tiny Tapeout 04 participant self-identification.}
 \label{fig:TT04_submitters}
 \end{figure}
