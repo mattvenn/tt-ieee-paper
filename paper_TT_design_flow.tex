@@ -1,7 +1,7 @@
 \section{Design Flow}
 \label{sec:design_flow}
 
-Tiny Tapeout designs are primarily developed in the Verilog Hardware Description Language (HDL) or Wokwi~\cite{wokwi}.
+Tiny Tapeout designs are primarily developed in the Verilog hardware description language (HDL) or Wokwi~\cite{wokwi}.
 Wokwi is a web based visual schematic editor for hardware description, designed as an easier way for individuals with no prior HDL experience to get started.
 The Tiny Tapeout website~\cite{tinytapeout} includes a basic Wokwi getting started guide, demonstrating how to use the tool to draw circuits, which is made available in English and Spanish.
 
@@ -14,9 +14,9 @@ There are four main jobs in the continuous integration system:
 \begin{enumerate}
 	\item GDS: installs OpenLane\cite{openlane} and the SkyWater Sky130\cite{skywaterpdk} PDK, builds the binary layout files, and generates a summary of the design (Fig.~\ref{fig:summary_table_GDS_job}). The summary includes utilization, standard cells used, a 2-D render (Fig.~\ref{fig:render_cells_in_use}) and an interactive 3-D viewer (Fig.~\ref{fig:interactive_3D_viewer}).
 This job can also optionally run a gate-level verification of the design.
-	\item Verification: installs the YosysHQ open source Computer-Aided Design (CAD) suite, which includes many common electronic design automation (EDA) tools; uses iVerilog\cite{iverilog} and cocotb\cite{cocotb} to run included testbenches.
+	\item Verification: installs the YosysHQ open source computer-aided design (CAD) suite, which includes many common electronic design automation (EDA) tools; uses iVerilog\cite{iverilog} and cocotb\cite{cocotb} to run included testbenches.
 	\item Documentation: generates a preview of the documentation.
-	\item Precheck: runs Design Rule Check (DRC) tests to ensure the design can be integrated into the multi project chip.
+	\item Precheck: runs design rule check (DRC) tests to ensure the design can be integrated into the multi project chip.
 \end{enumerate}
 
 Successful GDS, Documentation, and Precheck job completion are all required for a design to be submitted to a shuttle for production.
