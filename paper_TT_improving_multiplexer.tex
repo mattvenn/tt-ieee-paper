@@ -1,27 +1,27 @@
 \section{Improving the Multiplexer and Mixed Signal Support}
 \label{sec:improving}
 
-TT05 split the mux into two parts to improve performance. Because of the split, the controller was also updated to mux between the two halves.
-Some other small changes to the mux including improving STA results by tweaking, adding or removing buffers.
-As each spine segment is now half as long, it will have half the capacitance. 
-We expect to reduce the round trip latency to around \qty{10}{\ns}.
+Tiny Tapeout 05 split the multiplexer into two parts in order to improve performance. As a result of the split the controller was also updated to multiplex between the two halves.
+Some other small changes to the multiplexer include the tweaking, addition, or removal of buffers to improve the STA results.
 
-For TT06, the Caravel harness will be replaced by OpenFrame~\cite{openframe}, an alternative harness provided by Efabless that uses the same padring but removes the RISC-V coprocessor.
-This results in \qty{5}{\mm\squared} more space for user designs, and 12 more pins that will be used for analog signals.
+As each spine segment in Tiny Tapeout 05 is now half as long as in Tiny Tapeout 04, it will exhibit half the capacitance. As a result, we expect to see the round trip latency reduced to around \qty{10}{\ns}.
 
-For increased safety, all designs will be power-gated, which allows designers to take more risks or use custom flows.
+For Tiny Tapeout 06 the Caravel harness will be replaced by OpenFrame~\cite{openframe}, an alternative harness provided by Efabless that uses the same padring but removes the RISC-V coprocessor.
+This results in an additional \qty{5}{\mm\squared} of space for user designs, and 12 more IO pins which will be used for analog signals.
 
-Analog and mixed-signal designs will be enabled by adding an analog multiplexer based on transmission gates~\cite{transmissiongates}. 
+For increased safety, all designs will be power-gated. This allows designers to take more risks in their submissions, or to use custom flows not previously used in Tiny Tapeout.
+
+Analog and mixed signal designs will be enabled by adding an analog multiplexer based on transmission gates~\cite{transmissiongates}. 
 This allows up to 192 designs to share the analog pins between them.
-The transmission gates were tested as part of an experimental analog submission to TT05 shown in Fig.~\ref{fig:transmission_gate_TT05}.
+These transmission gates were tested as part of an experimental analog submission to Tiny Tapeout 05, shown in Fig.~\ref{fig:transmission_gate_TT05}.
 
-Noise coupling between analog and digital power domains is a critical concern. However, due to other limitations of our current setup like limited number of low bandwidth analog interfaces, we target educational low-medium performance analog and mixed-signal designs, where noise coupling is a lesser concern.
+Noise coupling between analog and digital power domains is a known concern. However, due to other limitations of our current setup including its limited number of low bandwidth analog interfaces, we target educational low to medium performance analog and mixed signal designs where noise coupling is a lesser concern.
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt05_transmission_gate.png}
-\caption{Ring oscillator and DAC design submitted to TT05 with a transmission gate highlighted (auto-placed and auto-routed using an experimental analog P\&R tool).}
+\caption{A ring oscillator and digital to analog converter (DAC) design submitted to Tiny Tapeout 05, with a transmission gate highlighted. This design was automatically placed and routed using an experimental analog place and route (P\&R) tool).}
 \label{fig:transmission_gate_TT05}
 \end{figure}
 
-TT06 is planned to open for digital designs at the end of January 2024, for analog designs at the end of February, and to close on April 19th, 2024.
+Tiny Tapeout 06 is planned to open for submission of digital designs at the end of January 2024, for analog designs at the end of February 2024, and to close for submissions on 19 April 2024.
