@@ -1,7 +1,7 @@
 \section{Scan Chain Architecture}
 \label{sec:scanchain_arch}
 
-TinyTapeout started as an experiment in fitting as many designs as possible into the \qty{10}{\milli\meter\squared} available on the Google lottery shuttles (Fig.~\ref{fig:500_designs_chain_TT01}).
+Tiny Tapeout started as an experiment in fitting as many designs as possible into the \qty{10}{\milli\meter\squared} available on the Google lottery shuttles (Fig.~\ref{fig:500_designs_chain_TT01}).
 As a fast proof of concept, a scan chain was chosen.
 Each design had 8 inputs and 8 outputs.
 Clock and reset were optional and not treated specially. The chain was formed of scan flops~\cite{skywaterpdk}, a type of flip flop with an integrated multiplexer at its input. An example showing a two-design scan chain is shown in Fig.~\ref{fig:simplified_view_2_designs}.
