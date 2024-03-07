@@ -14,6 +14,8 @@ Analog and mixed-signal designs will be enabled by adding an analog multiplexer 
 This allows up to 192 designs to share the analog pins between them.
 The transmission gates were tested as part of an experimental analog submission to TT05 shown in Fig.~\ref{fig:transmission_gate_TT05}.
 
+Noise coupling between analog and digital power domains is a critical concern. However, due to other limitations of our current setup like limited number of low bandwidth analog interfaces, we target educational low-medium performance analog and mixed-signal designs, where noise coupling is a lesser concern.
+
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt05_transmission_gate.png}
