@@ -2,6 +2,8 @@
 \label{sec:multiplexer_silicon_res}
 After silicon was received, the worst round trip latency was measured to be \qty{20}{\ns} as shown in Fig~\ref{fig:round_trip_latency_rising_edge} and \ref{fig:round_trip_latency_falling_edge}. Some designs have been validated, including a VGA clock project (Fig.~\ref{fig:VGA_clock_design_TT03_5_silicon}) that takes advantage of the new higher speed IO.
 
+The overhead of multiplexing multiple tiles makes power consumption of the infrastructure only a minor concern at this point. We don't have a direct comparison of the power consumption impact of the multiplexer vs. the scan-chain architecture. The motivation of the multiplexer approach is to substantially increase the bandwidth of the IOs.
+
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt3p5 rising latency.PNG}
