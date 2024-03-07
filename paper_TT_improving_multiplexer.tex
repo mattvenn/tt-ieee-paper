@@ -1,8 +1,9 @@
 \section{Improving the Multiplexer and Mixed Signal Support}
 \label{sec:improving}
 
-TT05 split the mux into two parts to improve performance.
-As each spine segment is now half as long, it will have half the capacitance.
+TT05 split the mux into two parts to improve performance. Because of the split, the controller was also updated to mux between the two halves.
+Some other small changes to the mux including improving STA results by tweaking, adding or removing buffers.
+As each spine segment is now half as long, it will have half the capacitance. 
 We expect to reduce the round trip latency to around \qty{10}{\ns}.
 
 For TT06, the Caravel harness will be replaced by OpenFrame~\cite{openframe}, an alternative harness provided by Efabless that uses the same padring but removes the RISC-V coprocessor.
