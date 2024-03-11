@@ -1,11 +1,19 @@
-\section{Design Flow}
+\section{Design Submission Flow}
 \label{sec:design_flow}
 
 Tiny Tapeout designs are primarily developed in the Verilog hardware description language (HDL) or Wokwi~\cite{wokwi}.
 Wokwi is a web based visual schematic editor for hardware description, designed as an easier way for individuals with no prior HDL experience to get started.
 The Tiny Tapeout website~\cite{tinytapeout} includes a basic Wokwi getting started guide, demonstrating how to use the tool to draw circuits, which is made available in English and Spanish.
 
-The design flow has the participant create a GitHub~\cite{github} source code repository based on provided templates then add their ASIC design. This triggers automated tests and the generation of binary layout files in GDSII~\cite{gds}. If all tests pass and the binary layout files are correctly generated, the design is then submitted to a quarterly shuttle for production in silicon.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{./Figs/submission_flow.png}
+\caption{Design Submission Flow}
+\label{fig:submission_flow}
+\end{figure}
+
+
+The submission flow~\cite{submission_flow} starts with the participant creating a GitHub~\cite{github} source code repository based on provided templates then adding their ASIC design. This triggers automated tests and the generation of binary layout files in GDSII~\cite{gds}. If all tests pass and the binary layout files are correctly generated, the design can then be submitted to a quarterly shuttle for production in silicon.
 
 The Tiny Tapeout GitHub templates\cite{verilogtemplate} make use of GitHub Actions\cite{githubactions}---an automatic continuous integration system triggered every time the repository is updated. This reduces duplicated effort and makes it possible for Tiny Tapeout to support large numbers of participants without excessive technical overhead.
 
@@ -21,6 +29,8 @@ This job can also optionally run a gate-level verification of the design.
 
 Successful GDS, Documentation, and Precheck job completion are all required for a design to be submitted to a shuttle for production.
 Verification is optional but highly encouraged. Submissions designed in Wokwi are able to make use of its integrated truth table testing system\cite{automatedtesting}.
+
+Projects are submitted to a shuttle through the Tiny Tapeout website~\cite{tinytapeout}. Projects can be continually updated up until the closing date of the shuttle.
 
 While the Tiny Tapeout continuous integration system can be run entirely in the user's web browser, it is also possible to install a local copy of the tools\cite{localinstall} on a participant's computer. Locally installed tools can help to reduce the time between design iterations, especially for the test and verification jobs.
 
