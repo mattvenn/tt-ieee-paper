@@ -1,7 +1,7 @@
 \section{Scan Chain Silicon Results}
 \label{sec:scan_chain_res}
 
-Tiny Tapeout 02 chips were received in October 2023, 11 months after the chips were submitted for manufacture on the Efabless chipIgnite 2211Q shuttle.
+Tiny Tapeout 2 chips were received in October 2023, 11 months after the chips were submitted for manufacture on the Efabless chipIgnite 2211Q shuttle.
 The chips were tested for the first time on a public livestream~\cite{siliconalive}.
 During this testing the chain was validated and a small number of the designs were demonstrated to be working.
 In further testing following the livestream another 30 designs were and shown to be working.
@@ -9,13 +9,13 @@ In further testing following the livestream another 30 designs were and shown to
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt02_clock_out.png}
-\caption{Measurement from Tiny Tapeout 02 silicon, with input clock in yellow and the distorted output clock in blue.}
+\caption{Measurement from Tiny Tapeout 2 silicon, with input clock in yellow and the distorted output clock in blue.}
 \label{fig:TT02_clock_out}
 \end{figure}
 
 After measuring the clock asymmetry (Fig.~\ref{fig:TT02_clock_out}) and maximum frequency it was decided to run the production boards with a \qty{20}{\MHz} oscillator, resulting in a \qty{10}{\MHz} scan chain clock and a \qty{5}{\kHz} IO update rate in order to maximize stability.
 
-Some Tiny Tapeout 02 designs did not function as expected; in most cases this was determineted to be due to faults in the submitted design.
+Some Tiny Tapeout 2 designs did not function as expected; in most cases this was determineted to be due to faults in the submitted design.
 
 Of the designs submitted 82 used the Verilog HDL, 64 were created using the Wokwi graphical editor, and six used alternative HDLs including VHDL, Amaranth~\cite{amaranth}, and Chisel~\cite{chisel}.
 
@@ -36,6 +36,6 @@ Silicon from Tiny Tapeout 3 production was received in January 2024. The updated
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt03_clock_out.png}
-\caption{Measurement from Tiny Tapeout 03 silicon.}
+\caption{Measurement from Tiny Tapeout 3 silicon.}
 \label{fig:TT03_silicon_measurement}
 \end{figure}

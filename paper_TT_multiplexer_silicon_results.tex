@@ -1,22 +1,22 @@
 \section{Multiplexer Silicon Results}
 \label{sec:multiplexer_silicon_res}
-After Tiny Tapeout 04 silicon was received and tested, the worst round trip latency was measured to be \qty{20}{\ns} as shown in Fig~\ref{fig:round_trip_latency_rising_edge} and \ref{fig:round_trip_latency_falling_edge}.
+After Tiny Tapeout 4 silicon was received and tested, the worst round trip latency was measured to be \qty{20}{\ns} as shown in Fig~\ref{fig:round_trip_latency_rising_edge} and \ref{fig:round_trip_latency_falling_edge}.
 
-Some Tiny Tapeout 03.5 designs have been validated, including a VGA clock project (Fig.~\ref{fig:VGA_clock_design_TT03_5_silicon}) which takes advantage of the new higher speed IO.
+Some Tiny Tapeout 3.5 designs have been validated, including a VGA clock project (Fig.~\ref{fig:VGA_clock_design_TT03_5_silicon}) which takes advantage of the new higher speed IO.
 
 The overhead of multiplexing multiple tiles makes power consumption of the infrastructure only a minor concern at this point. No direct comparison of the power consumption impact of the multiplexer over the previous scan chain architecture is available at the time of writing. The motivation of the multiplexer approach, however, was to substantially increase the bandwidth of the IOs.
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt3p5 rising latency.PNG}
-\caption{The Tiny Tapeout 03.5 round trip latency on a rising edge, measured at about \qty{20}{\ns}.}
+\caption{The Tiny Tapeout 3.5 round trip latency on a rising edge, measured at about \qty{20}{\ns}.}
 \label{fig:round_trip_latency_rising_edge}
 \end{figure}
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt3p5 falling latency.PNG}
-\caption{The Tiny Tapeout 03.5 round trip latency on a falling edge, measured at about \qty{16}{\ns}.}
+\caption{The Tiny Tapeout 3.5 round trip latency on a falling edge, measured at about \qty{16}{\ns}.}
 \label{fig:round_trip_latency_falling_edge}
 \end{figure}
 
@@ -46,7 +46,7 @@ The Raspberry Pi RP2040 microcontroller was chosen as a coprocessor on the revis
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt04-demoboard-top.jpg}
-\caption{The Tiny Tapeout 04+ demonstration board\cite{tt04demoboard}.}
+\caption{The Tiny Tapeout 4+ demonstration board\cite{tt04demoboard}.}
 \label{fig:TT04plus_demo_board}
 \end{figure}
 

@@ -3,20 +3,20 @@
 
 Tiny Tapeout started as an experiment in fitting as many designs as possible into the \qty{10}{\milli\meter\squared} available on the Google lottery shuttles (Fig.~\ref{fig:500_designs_chain_TT01}).
 To rapidly prove the concept, initial designs were based on a scan chain architecture to simplify testing.
-Each Tiny Tapeout 01 design has eight inputs and eight outputs.
+Each Tiny Tapeout 1 design has eight inputs and eight outputs.
 Clock and reset signals were optional and not treated specially. The chain was formed of scan flops~\cite{skywaterpdk}, a type of flip flop with an multiplexer integrated at its input. An example showing a two design scan chain is shown in Fig.~\ref{fig:simplified_view_2_designs}.
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=1\columnwidth]{./Figs/tt01_whole_die.png}
-\caption{500 designs connected in a chain for Tiny Tapeout 01; the scan chain driver can be seen in the lower left corner.}
+\caption{500 designs connected in a chain for Tiny Tapeout 1; the scan chain driver can be seen in the lower left corner.}
 \label{fig:500_designs_chain_TT01}
 \end{figure}
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/scanchain_block_diagram.png}
-\caption{A simplified view of two Tiny Tapeout 01 designs in the scan chain.}
+\caption{A simplified view of two Tiny Tapeout 1 designs in the scan chain.}
 \label{fig:simplified_view_2_designs}
 \end{figure}
 
@@ -28,14 +28,14 @@ While relatively easy to implement, a scan chain architecture has a downside: hi
 As more designs are added to the chain it takes longer to send and receive data through it.
 For example: assuming a \qty{50}{\MHz} scan chain clock with 250 designs each having eight inputs and eight outputs, the maximum refresh rate of the resulting chain is $\qty{50}{\MHz} / (8 \times 250) = \qty{25}{\kHz}$.
 
-The Tiny Tapeout 01 scan chain was embedded into each design, meaning a user could unintentionally remove it and break the chain.
+The Tiny Tapeout 1 scan chain was embedded into each design, meaning a user could unintentionally remove it and break the chain.
 This risk was mitigated with a formal~\cite{tinytapeoutscan} equivalence check which proves the chain was present in each submitted design.
-For Tiny Tapeout 02 and Tiny Tapeout 03 the scan chain was separated into a discrete macro block which participants cannot modify.
+For Tiny Tapeout 2 and Tiny Tapeout 3 the scan chain was separated into a discrete macro block which participants cannot modify.
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt02_gds_zoom.png}
-\caption{Tiny Tapeout 02 designs, showing the discrete scan chain blocks.}
+\caption{Tiny Tapeout 2 designs, showing the discrete scan chain blocks.}
 \label{fig:TT02_separate_scan_blocks}
 \end{figure}
 
@@ -43,13 +43,13 @@ Another concern with the scan chain design was hold violations, due to the large
 
 Following static timing analysis (STA) it was discovered that the clock duty cycle could change substantially due to the \(500\) sequential clock drivers in the chain. Depending on the clock buffers and capacitance between each design the clock duty cycle could either increase or decrease, with this effect accumulated over the chain.
 
-For Tiny Tapeout 01 and Tiny Tapeout 02 each design used two clock buffers, with the internal flops driven after the first buffer.
-Tiny Tapeout 03 used inverting clock buffers, with only one between the clock input and output. Fig. ~\ref{fig:TT02_vs_TT03} shows a comparison between the TT02 and TT03 clock buffer designs. By inverting the clock between each design any asymmetry in the clock pulse is evenly spread across the negative and positive cycles.
+For Tiny Tapeout 1 and Tiny Tapeout 2 each design used two clock buffers, with the internal flops driven after the first buffer.
+Tiny Tapeout 3 used inverting clock buffers, with only one between the clock input and output. Fig. ~\ref{fig:TT02_vs_TT03} shows a comparison between the TT02 and TT03 clock buffer designs. By inverting the clock between each design any asymmetry in the clock pulse is evenly spread across the negative and positive cycles.
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{./Figs/tt02 vs tt03 scanchain clock.png}
-\caption{The Tiny Tapeout 03 architecture buffers the output from the clock network into each design. Clock polarity is alternated between designs to minimize asymmetry between positive and negative cycles.}
+\caption{The Tiny Tapeout 3 architecture buffers the output from the clock network into each design. Clock polarity is alternated between designs to minimize asymmetry between positive and negative cycles.}
 \label{fig:TT02_vs_TT03}
 \end{figure}
 
