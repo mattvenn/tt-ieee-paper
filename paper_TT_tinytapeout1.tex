@@ -1,7 +1,7 @@
 \section{Tiny Tapeout 1}
 \label{sec:tinytapeout1}
 
-The Tiny Tapeout project started as an experiment in fitting as many designs as possible into the \qty{10}{\milli\meter\squared} available on the Google lottery shuttles (Fig.~\ref{fig:500_designs_chain_TT01}), using the Efabless Caravel harness.
+The Tiny Tapeout project started as an experiment in fitting as many designs as possible into the \qty{10}{\milli\meter\squared} available on the Google lottery shuttles (Fig.~\ref{fig:500_designs_chain_TT01}) using the Efabless Caravel harness.
 In order to prove the concept as rapidly as possible initial designs were based on a scan chain architecture to simplify testing.
 
 Each Tiny Tapeout 1 design has eight inputs and eight outputs.
@@ -27,13 +27,13 @@ This arrangement allows the loading of data into any of the designs, followed by
 
 While relatively easy to implement, a scan chain architecture has a downside: high latency.
 As more designs are added to the chain it takes longer to send and receive data through it.
-For example: assuming a \qty{50}{\MHz} scan chain clock with 250 designs each having eight inputs and eight outputs, the maximum refresh rate of the resulting chain is $\qty{50}{\MHz} / (8 \times 250) = \qty{25}{\kHz}$.
+For example: assuming a \qty{50}{\MHz} scan chain clock with \qty{250} designs each having eight inputs and eight outputs, the maximum refresh rate of the resulting chain is $\qty{50}{\MHz} / (8 \times 250) = \qty{25}{\kHz}$.
 
 The Tiny Tapeout 1 scan chain was embedded into each design, meaning a user could unintentionally remove it and break the chain.
-This risk was mitigated with a formal~\cite{tinytapeoutscan} equivalence check which proves the chain was present in each submitted design, preventing their submission if it had been removed.
+This risk was mitigated with a formal equivalence check~\cite{tinytapeoutscan} which proves the chain was present in each submitted design and prevents submission if it has been removed.
 
 Another concern with the scan chain design was hold violations, due to the large number of serially connected flops and potentially large clock skews over long signal wires. This was mitigated by reclocking the output data with a negative edge (negedge) flop, providing substantially more hold margin.
 
-Following static timing analysis (STA) it was discovered that the clock duty cycle could change substantially due to the \(500\) sequential clock drivers in the chain. Depending on the clock buffers and capacitance between each design the clock duty cycle could either increase or decrease, with this effect accumulated over the chain.
+Following static timing analysis (STA) it was discovered that the clock duty cycle could change substantially due to the \qty{500} sequential clock drivers in the chain. Depending on the clock buffers and capacitance between each design the clock duty cycle could either increase or decrease, with this effect accumulated over the chain.
 
 The verification effort~\cite{verificationmd} for the scan chain was broad and included a community review, register transfer level (RTL) and gate level (GL) simulation, formal verification\cite{sby}, STA, layout vs. schematic (LVS), DRC, and device level static verification~\cite{cvc}.

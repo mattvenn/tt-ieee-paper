@@ -1,10 +1,10 @@
 \section{Results and Measurements}
 \label{sec:results}
 
-Tiny Tapeout 2 chips were received in October 2023, 11 months after the chips were submitted for manufacture on the Efabless chipIgnite 2211Q shuttle.
+Tiny Tapeout 2 chips were received in October 2023, \qty{11} months after the chips were submitted for manufacture on the Efabless chipIgnite 2211Q shuttle.
 The chips were tested for the first time on a public livestream~\cite{siliconalive}.
 During this testing the chain was validated and a small number of the designs were demonstrated to be working.
-In further testing following the livestream another 30 designs were tested and shown to be working.
+In further testing following the livestream another \qty{30} designs were tested and shown to be working.
 
 \begin{figure}[!t]
 \centering
@@ -17,10 +17,10 @@ After measuring the clock asymmetry (Fig.~\ref{fig:TT02_clock_out}) and maximum 
 
 Some Tiny Tapeout 2 designs did not function as expected; in most cases this was determined to be due to faults in the submitted design.
 
-Of the designs submitted 82 used the Verilog HDL, 64 were created using the Wokwi graphical editor, and six used alternative HDLs including VHDL, Amaranth~\cite{amaranth}, and Chisel~\cite{chisel}.
+Of the designs submitted \qty{82} used the Verilog HDL, \qty{64} were created using the Wokwi graphical editor, and six used alternative HDLs including VHDL, Amaranth~\cite{amaranth}, and Chisel~\cite{chisel}.
 
-Some of the designs created using Wokwi using combinational logic in clock paths (Fig.~\ref{fig:failed_design_comb_logic}) worked in simulation but failed in hardware.
-This was determinted to be due to the lack of timing data in the simulation, and was not detected by STA because the clock paths were not known. A detailed analysis on these failures has yet to be carried out.
+Some of the designs created in Wokwi using combinational logic in clock paths (Fig.~\ref{fig:failed_design_comb_logic}) worked in simulation but failed in hardware.
+This was determined to be due to the lack of timing data in the simulation, and was not detected by STA because the clock paths were not known. A detailed analysis on these failures has yet to be carried out.
 
 \begin{figure}[!t]
 \centering
@@ -29,7 +29,7 @@ This was determinted to be due to the lack of timing data in the simulation, and
 \label{fig:failed_design_comb_logic}
 \end{figure}
 
-PCBs were assembled and shipped to customers in January 2024. Around 50 designs have been tested and shown to be working.
+Tiny Tapeout 2 PCBs were assembled and shipped to participants in January 2024. Around \qty{50} designs have been tested and shown to be working.
 
 Silicon from Tiny Tapeout 3 production was received in January 2024. The updated scan chain design shows a more symmetric output clock at the end of the chain (Fig.~\ref{fig:TT03_silicon_measurement}). The improved clock symmetry will allow for the use of a faster scan chain clock, resulting in a faster update frequency.
 
@@ -42,9 +42,9 @@ Silicon from Tiny Tapeout 3 production was received in January 2024. The updated
 
 Some Tiny Tapeout 3.5 designs have already been validated, including a VGA clock project (Fig.~\ref{fig:VGA_clock_design_TT03_5_silicon}) which takes advantage of the new higher speed IO.
 
-The overhead of multiplexing multiple tiles makes power consumption of the infrastructure only a minor concern at this point. No direct comparison of the power consumption impact of the multiplexer over the previous scan chain architecture is available at the time of writing. The motivation of the multiplexer approach, however, was to substantially increase the bandwidth of the IOs.
+The overhead of multiplexing multiple tiles makes power consumption of the infrastructure only a minor concern. No direct comparison of the power consumption impact of the multiplexer over the previous scan chain architecture is available at the time of writing. The motivation of the multiplexer approach, however, was to substantially increase the bandwidth of the IOs, with no regard to power draw.
 
-After Tiny Tapeout 3.5 silicon was received and tested, the worst round trip latency was measured to be \qty{20}{\ns} as shown in Fig~\ref{fig:round_trip_latency_rising_edge} and \ref{fig:round_trip_latency_falling_edge}.
+After Tiny Tapeout 3.5 silicon was received and tested the worst round trip latency was measured to be \qty{20}{\ns} as shown in Fig~\ref{fig:round_trip_latency_rising_edge} and \ref{fig:round_trip_latency_falling_edge}.
 
 \begin{figure}[!t]
 \centering

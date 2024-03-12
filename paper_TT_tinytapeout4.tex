@@ -15,11 +15,11 @@ The winning architecture was a straightforward multiplexer design, shown in Fig.
 \end{figure}
 
 The physical layout tested in Tiny Tapeout 3.5 and finalized in Tiny Tapeout 4 (shown in Fig.~\ref{fig:TT03_5_test_design}) consists of a central controller connected up and down to two vertical wiring spines.
-For this experimental run we also included loopback test designs at the end of each multiplexer so we could measure performance for each multiplexer position.
+The experimental run also included loopback test designs at the end of each multiplexer, allowing performance measurement for each multiplexer position.
 
-Twenty-four horizontal multiplexers connect to the vertical wiring spines, each of which supports 16 designs.
-This allows for up to 384 separate single tile designs.
-The new architecture also enabled multiple tile designs, allowing a maximum project size of $8 \times 2$ tiles or $1359 \times \qty{225}{\um\squared}$---around \num{20000} logic cells. Table~\ref{tab:comparison_TT03_TT04} shows the key differences between Tiny Tapeout 3 and Tiny Tapeout 4.
+Twenty-four horizontal multiplexers connect to the vertical wiring spines, each of which supports \qty{16} designs.
+This allows for up to \qty{384} separate single tile designs.
+The new architecture also enabled multiple tile designs, allowing a maximum project size of $8 \times 2$ tiles or $1359 \times \qty{225}{\um\squared}$---around \qty{20000} logic cells. Table~\ref{tab:comparison_TT03_TT04} shows the key differences between Tiny Tapeout 3 and Tiny Tapeout 4.
 
 \begin{figure}[!t]
 \centering
@@ -29,7 +29,7 @@ The new architecture also enabled multiple tile designs, allowing a maximum proj
 \end{figure}
 
 Another major limitation of the scan chain architecture used in Tiny Tapeout 1 through Tiny Tapeout 3 was the small number of IO pins.
-The scan controller used nine GPIOs to select the currently active design. While this simplified the demonstration board board, it also wasted valuable IO pins.
+The scan controller used nine GPIOs to select the currently active design. While this simplified the design of the demonstration board, it also wasted valuable IO pins.
 
 Starting with Tiny Tapeout 4 the parallel design selection architecture used in previous chips was dropped in favor of a serial protocol.
 The extra pins thus provided were then used bidirectionally, giving each design a clock pin, reset pin, and 24 IO pins.
@@ -52,5 +52,5 @@ Custom GDS file & \xmark & \checkmark \\
 \end{tabular}
 \end{table}
 
-Tiny Tapeout 4 opened in July 2023 and 143 designs were submitted, many of them taking advantage of the extra pins and area. 
+Tiny Tapeout 4 opened in July 2023 and \qty{143} designs were submitted, many of them taking advantage of the extra pins and area. 
 The finished design was submitted for production on Efabless chipIgnite 2309. Silicon is expected by April 2024.

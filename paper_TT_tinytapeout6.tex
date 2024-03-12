@@ -1,13 +1,13 @@
 \section{Tiny Tapeout 6}
 \label{sec:tinytapeout6}
 
-For Tiny Tapeout 6 the Caravel harness will be replaced by OpenFrame~\cite{openframe}, an alternative harness provided by Efabless that uses the same padring but removes the RISC-V coprocessor.
-This results in an additional \qty{5}{\mm\squared} of space for user designs, and 12 more IO pins which will be used for analog signals.
+For Tiny Tapeout 6 the Caravel harness will be replaced by OpenFrame~\cite{openframe}, an alternative harness provided by Efabless that uses the same padring but which removes the RISC-V coprocessor not used in Tiny Tapeout designs.
+This results in an additional \qty{5}{\mm\squared} of space for user designs, along with an additional 12 IO pins which will be used for analog signals.
 
-For increased safety, all designs will be power-gated. This allows designers to take more risks in their submissions, or to use custom flows not previously used in Tiny Tapeout.
+For increased safety all designs will be power-gated. This allows designers to take more risks in their submissions, or to use custom flows not previously used in Tiny Tapeout.
 
 Analog and mixed signal designs will be enabled by adding an analog multiplexer based on transmission gates~\cite{transmissiongates}. 
-This allows up to 192 designs to share the analog pins between them.
+This allows up to \qty{192} designs to share the analog pins between them.
 
 Noise coupling between analog and digital power domains is a known concern. However, due to other limitations of our current setup including its limited number of low bandwidth analog interfaces, we target educational low to medium performance analog and mixed signal designs where noise coupling is a lesser concern.
 
