@@ -12,12 +12,17 @@ By separating the cost of area on a silicon wafer and the finished physical chip
 
 Each Tiny Tapeout tile (Fig.~\ref{fig:render_cells_in_use}) is approximately $160 \times \qty{100}{\micro\meter\squared}$. This provides enough room for around 1000 logic gates when built upon the SkyWater \qty{130}{\nm} open source PDK. Multiple tiles can be interconnected to enable larger designs, while analog and mixed signal support is on the roadmap for the next shuttle.
 
-Community engagement in Tiny Tapeout has been strong, with 756 designs submitted over the first five shuttles. A curated selection of projects is provided in section~\ref{sec:silicon_showcase}.
-
-An online chat server for participants has 1000 members with 1600 subscribers to the project's mailing list. Individuals submitting designs to Tiny Tapeout tend to self identify as hobbyists, students, and teachers, as shown in Fig.~\ref{fig:TT04_submitters}.
-
 The first~\cite{firstshuttle} Tiny Tapeout production run, which was provided as a free and experimental effort with a total of 152 designs, was submitted to the seventh Google-sponsored~\cite{googlesponsored} lottery based multi project wafer (MPW) shuttle in September 2022.
 The next four shuttles combined a total of 582 designs, all sponsored by and manufactured through the Efabless~\cite{efabless} chipIgnite MPW service on the SkyWater \qty{130}{\nm} process. Table~\ref{tab:tinytapeout} shows a summary of all Tiny Tapeout shuttle runs to date.
+
+Individuals submitting designs to Tiny Tapeout tend to self identify as hobbyists, students, and teachers, as shown in Fig.~\ref{fig:TT04_submitters}.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{./Figs/about our community pie chart.png}
+\caption{Tiny Tapeout 4 participant self identification.}
+\label{fig:TT04_submitters}
+\end{figure}
 
 The remainder of this paper will detail the Tiny Tapeout submission flow, multiplexer evolution, circuit board design, the results of post production silicon testing, and the project's next steps.
 
@@ -44,11 +49,4 @@ TT06 & 2024-02-01  & 2404  & TBD & 2024-11-30 & Split Mux                 & 38 &
 \includegraphics[width=\columnwidth]{./Figs/gh action gds layout.png}
 \caption{A 2-D render of a single Tiny Tapeout tile.}
 \label{fig:render_cells_in_use}
-\end{figure}
-
-\begin{figure}[!t]
-\centering
-\includegraphics[width=\columnwidth]{./Figs/about our community pie chart.png}
-\caption{Tiny Tapeout 4 participant self identification.}
-\label{fig:TT04_submitters}
 \end{figure}
