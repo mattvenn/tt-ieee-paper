@@ -17,7 +17,7 @@ The winning architecture was a straightforward multiplexer design, shown in Fig.
 The physical layout tested in Tiny Tapeout 3.5 and finalized in Tiny Tapeout 4 (shown in Fig.~\ref{fig:TT03_5_test_design}) consists of a central controller connected up and down to two vertical wiring spines.
 For this experimental run we also included loopback test designs at the end of each multiplexer so we could measure performance for each multiplexer position.
 
-Twenty-four horizontal multiplexers connect to the wiring spines, each of which supports 16 designs.
+Twenty-four horizontal multiplexers connect to the vertical wiring spines, each of which supports 16 designs.
 This allows for up to 384 separate single tile designs.
 The new architecture also enabled multiple tile designs, allowing a maximum project size of $8 \times 2$ tiles or $1359 \times \qty{225}{\um\squared}$---around \num{20000} logic cells. Table~\ref{tab:comparison_TT03_TT04} shows the key differences between Tiny Tapeout 3 and Tiny Tapeout 4.
 
@@ -51,3 +51,6 @@ Custom GDS file & \xmark & \checkmark \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+Tiny Tapeout 4 opened in July 2023 and 143 designs were submitted, many of them taking advantage of the extra pins and area. 
+The finished design was submitted for production on Efabless chipIgnite 2309. Silicon is expected by April 2024.

@@ -14,9 +14,9 @@ The process of designing an ASIC for submission to Tiny Tapeout, whether with Wo
 \label{fig:submission_flow}
 \end{figure}
 
-The submission flow starts with the participant creating a GitHub~\cite{github} source code repository based on a template provided by Tiny Tapeout. Using this template and guidance provided through the Tiny Tapeout website and broader communication channels the participant then creates their chip design in Verilog, Wokwi, or the HDL of their choice.
+The submission flow starts with the participant creating a GitHub~\cite{github} source code repository from a template provided by Tiny Tapeout. Using this template and guidance provided through the Tiny Tapeout website and broader communication channels the participant then creates their chip design in Verilog, Wokwi, or the HDL of their choice.
 
-The participant's design must then be documented, after which the design and its documentation can be submitted to the Tiny Tapeout GitHub repository. This submission triggers automated tests and the generation of binary layout files in GDSII~\cite{gds} format.
+The participant's design must then be documented, after which the design and its documentation can be commited and pushed to the GitHub repository. This submission triggers automated tests and the generation of binary layout files in GDSII~\cite{gds} format.
 
 This automated testing and GDS generation is handled through the Tiny Tapeout GitHub templates\cite{verilogtemplate} using GitHub Actions\cite{githubactions}---an automatic continuous integration system triggered every time the repository is updated. This reduces duplicated effort and makes it possible for Tiny Tapeout to support large numbers of participants without excessive technical overhead.
 
@@ -25,7 +25,7 @@ There are four main jobs in the continuous integration system:
 \begin{enumerate}
 	\item GDS: installs OpenLane\cite{openlane} and the SkyWater Sky130\cite{skywaterpdk} PDK, builds the binary layout files, and generates a summary of the design (Fig.~\ref{fig:summary_table_GDS_job}). The summary includes utilization, standard cells used, a 2-D render (Fig.~\ref{fig:render_cells_in_use}) and an interactive 3-D viewer (Fig.~\ref{fig:interactive_3D_viewer}).
 This job can also optionally run a gate-level verification of the design.
-	\item Verification: installs the YosysHQ open source computer-aided design (CAD) suite, which includes many common electronic design automation (EDA) tools; uses iVerilog\cite{iverilog} and cocotb\cite{cocotb} to run included testbenches.
+	\item Verification: installs the YosysHQ open source computer-aided design (CAD) suite, which includes many common electronic design automation (EDA) tools; uses iVerilog\cite{iverilog} and cocotb\cite{cocotb} to run any included testbenches.
 	\item Documentation: generates a preview of the documentation.
 	\item Precheck: runs design rule check (DRC) tests to ensure the design can be integrated into the multi project chip.
 \end{enumerate}

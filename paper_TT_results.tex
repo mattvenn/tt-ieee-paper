@@ -15,12 +15,12 @@ In further testing following the livestream another 30 designs were tested and s
 
 After measuring the clock asymmetry (Fig.~\ref{fig:TT02_clock_out}) and maximum frequency it was decided to run the production boards with a \qty{20}{\MHz} oscillator, resulting in a \qty{10}{\MHz} scan chain clock and a \qty{5}{\kHz} IO update rate in order to maximize stability.
 
-Some Tiny Tapeout 2 designs did not function as expected; in most cases this was determineted to be due to faults in the submitted design.
+Some Tiny Tapeout 2 designs did not function as expected; in most cases this was determined to be due to faults in the submitted design.
 
 Of the designs submitted 82 used the Verilog HDL, 64 were created using the Wokwi graphical editor, and six used alternative HDLs including VHDL, Amaranth~\cite{amaranth}, and Chisel~\cite{chisel}.
 
 Some of the designs created using Wokwi using combinational logic in clock paths (Fig.~\ref{fig:failed_design_comb_logic}) worked in simulation but failed in hardware.
-This was determinted to be due to the lack of timing data in the simulation, and wasn not detected by STA because the clock paths were not known. A detailed analysis on these failures has yet to be carried out.
+This was determinted to be due to the lack of timing data in the simulation, and was not detected by STA because the clock paths were not known. A detailed analysis on these failures has yet to be carried out.
 
 \begin{figure}[!t]
 \centering
@@ -29,7 +29,7 @@ This was determinted to be due to the lack of timing data in the simulation, and
 \label{fig:failed_design_comb_logic}
 \end{figure}
 
-At the time of writing PCBs are in production and are expected to ship to customers by the end of January 2024.
+PCBs were assembled and shipped to customers in January 2024. Around 50 designs have been tested and shown to be working.
 
 Silicon from Tiny Tapeout 3 production was received in January 2024. The updated scan chain design shows a more symmetric output clock at the end of the chain (Fig.~\ref{fig:TT03_silicon_measurement}). The improved clock symmetry will allow for the use of a faster scan chain clock, resulting in a faster update frequency.
 
@@ -44,7 +44,7 @@ Some Tiny Tapeout 3.5 designs have already been validated, including a VGA clock
 
 The overhead of multiplexing multiple tiles makes power consumption of the infrastructure only a minor concern at this point. No direct comparison of the power consumption impact of the multiplexer over the previous scan chain architecture is available at the time of writing. The motivation of the multiplexer approach, however, was to substantially increase the bandwidth of the IOs.
 
-After Tiny Tapeout 4 silicon was received and tested, the worst round trip latency was measured to be \qty{20}{\ns} as shown in Fig~\ref{fig:round_trip_latency_rising_edge} and \ref{fig:round_trip_latency_falling_edge}.
+After Tiny Tapeout 3.5 silicon was received and tested, the worst round trip latency was measured to be \qty{20}{\ns} as shown in Fig~\ref{fig:round_trip_latency_rising_edge} and \ref{fig:round_trip_latency_falling_edge}.
 
 \begin{figure}[!t]
 \centering

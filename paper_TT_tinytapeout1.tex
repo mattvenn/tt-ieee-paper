@@ -32,13 +32,6 @@ For example: assuming a \qty{50}{\MHz} scan chain clock with 250 designs each ha
 The Tiny Tapeout 1 scan chain was embedded into each design, meaning a user could unintentionally remove it and break the chain.
 This risk was mitigated with a formal~\cite{tinytapeoutscan} equivalence check which proves the chain was present in each submitted design, preventing their submission if it had been removed.
 
-\begin{figure}[!t]
-\centering
-\includegraphics[width=\columnwidth]{./Figs/tt02_gds_zoom.png}
-\caption{Tiny Tapeout 2 designs, showing the discrete scan chain blocks.}
-\label{fig:TT02_separate_scan_blocks}
-\end{figure}
-
 Another concern with the scan chain design was hold violations, due to the large number of serially connected flops and potentially large clock skews over long signal wires. This was mitigated by reclocking the output data with a negative edge (negedge) flop, providing substantially more hold margin.
 
 Following static timing analysis (STA) it was discovered that the clock duty cycle could change substantially due to the \(500\) sequential clock drivers in the chain. Depending on the clock buffers and capacitance between each design the clock duty cycle could either increase or decrease, with this effect accumulated over the chain.
